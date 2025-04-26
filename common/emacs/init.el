@@ -673,6 +673,9 @@
 (use-package format-all
   :commands (format-all-region-or-buffer))
 
+(use-package eat
+  :commands (eat))
+
 (use-package exec-path-from-shell
   :defer 10
   :when (memq window-system '(mac ns x))
