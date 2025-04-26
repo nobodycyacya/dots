@@ -1,0 +1,160 @@
+{
+  "$schema": "https://raw.githubusercontent.com/LGUG2Z/komorebi/nightly/schema.json",
+  "app_specific_configuration_path": "$Env:USERPROFILE/applications.json",
+  "window_hiding_behaviour": "Cloak",
+  "cross_monitor_move_behaviour": "Insert",
+  "default_workspace_padding": 0,
+  "default_container_padding": 0,
+  "border": true,
+  "border_width": 4,
+  "border_offset": 0,
+  "theme": {
+    "palette": "Base16",
+    "name": "DefaultDark",
+    "single_border": "Base0D",
+    "unfocused_border": "Base00",
+    "floating_border": "Base09",
+    "bar_accent": "Base0C"
+  },
+  "stackbar": {
+    "height": 40,
+    "mode": "OnStack",
+    "tabs": {
+      "width": 300
+    }
+  },
+  "display_index_preferences": {
+    "0": "CMN14D5-4&2cea4335&0&UID265988",
+    "1": "GSM5AB8-4&2cea4335&0&UID198195"
+  },
+  "monitors": [
+    { // Monitor 1: index 0
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "2",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "3",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "4",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "5",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "6",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "7",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "8",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "9",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        },
+        {
+          "name": "10",
+          "layout": "BSP",
+          "container_padding": 4,
+          "workspace_padding": 0
+        }
+      ]
+    },
+    { // Monitor 2: index 1
+      "workspaces": [
+        {
+          "name": "1",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "2",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "3",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "4",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "5",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "6",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "7",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "8",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "9",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        },
+        {
+          "name": "10",
+          "layout": "BSP",
+          "container_padding": 0,
+          "workspace_padding": 0
+        }
+      ]
+    }
+  ]
+}
