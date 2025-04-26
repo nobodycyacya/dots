@@ -650,6 +650,7 @@
 (use-package toml-mode)
 (use-package web-mode)
 (use-package emmet-mode)
+(use-package vimrc-mode)
 (use-package ess)
 
 (use-package scratch
