@@ -60,14 +60,14 @@ window#waybar {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
 #cpu.idle {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #cpu.normal {
@@ -81,7 +81,7 @@ window#waybar {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #f7ca88;
+  color: #dc9656;
   padding: 4px 8px;
 }
 #cpu.critical {
@@ -95,14 +95,14 @@ window#waybar {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
 #memory.idle {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #memory.normal {
@@ -116,7 +116,7 @@ window#waybar {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #f7ca88;
+  color: #dc9656;
   padding: 4px 8px;
 }
 #memory.critical {
@@ -130,35 +130,28 @@ window#waybar {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #d8d8d8;
+  color: #f7ca88;
   padding: 4px 8px;
 }
 #pulseaudio {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #d8d8d8;
+  color: #f7ca88;
   padding: 4px 8px;
 }
 #battery {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #battery.charging {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #7cafc2;
-  padding: 4px 8px;
-}
-#battery.critical {
-  background: #181818;
-  border: 2px solid #585858;
-  border-radius: 8px;
-  color: #ab4642;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #battery.warning {
@@ -168,11 +161,18 @@ window#waybar {
   color: #f7ca88;
   padding: 4px 8px;
 }
+#battery.critical {
+  background: #181818;
+  border: 2px solid #585858;
+  border-radius: 8px;
+  color: #ab4642;
+  padding: 4px 8px;
+}
 #clock {
   background: #181818;
   border: 2px solid #585858;
   border-radius: 8px;
-  color: #d8d8d8;
+  color: #ba8baf;
   padding: 4px 8px;
 }
 #tray {
