@@ -1,0 +1,324 @@
+@import 'https://www.nerdfonts.com/assets/css/webfont.css';
+
+i {
+  background: #181818;
+  color: #d8d8d8;
+  font-size: 11px;
+}
+
+body {
+  background: #181818;
+  color: #d8d8d8;
+  font-family: 'Segoe UI', 'JetBrainsMono Nerd Font', ui-monospace, monospace;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+#root {
+  background: #181818;
+  color: #d8d8d8;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  align-items: center;
+  height: 100%;
+  padding: 0px;
+}
+
+.left,
+.center,
+.right {
+  display: flex;
+  align-items: center;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: end;
+}
+
+/* LEFT */
+.logo {
+  border: 2px solid #585858;
+  border-radius: 4px;
+  background: #3c3e4f;
+  color: #a1b56c;
+  font-size: 13px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding: 4px;
+}
+
+.workspaces {
+  display: flex;
+  align-items: center;
+}
+
+.workspace {
+  border: 2px solid #585858;
+  border-radius: 4px;
+  background: #3c3e4f;
+  color: #d8d8d8;
+  cursor: pointer;
+  padding: 4px;
+  margin: 2px;
+
+  &.displayed {
+    border: 2px solid #585858;
+    border-radius: 4px;
+    background: #3c3e4f;
+    color: #d8d8d8;
+    padding: 4px;
+  }
+
+  &.focused {
+    border: 2px solid #585858;
+    border-radius: 4px;
+    background: #3c3e4f;
+    color: #ab4642;
+    padding: 4px;
+  }
+}
+
+.title {
+  background: #181818;
+  color: #d8d8d8;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 60%;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/* RIGHT */
+.paused-button {
+  border: 2px solid #585858;
+  border-radius: 4px;
+  background: #181818;
+  color: #a1b56c;
+  font-weight: 700;
+  padding: 4px 8px 4px 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.paused-button i {
+  margin-right: 4px;
+  color: #a1b56c;
+}
+
+.binding-mode {
+  border: 2px solid #585858;
+  border-radius: 4px;
+  background: #181818;
+  color: #ab4642;
+  font-weight: 700;
+  padding: 4px 8px 4px 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.binding-mode i {
+  margin-right: 4px;
+  color: #ab4642;
+}
+
+.tiling-direction {
+  border: 2px solid #585858;
+  border-radius: 4px;
+  background: #181818;
+  color: #86c1b9;
+  cursor: pointer;
+  line-height: 1;
+  padding: 4px 8px 4px 8px;
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+.cpu {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.cpu .text {
+  background: #181818;
+  color: #d8d8d8;
+}
+
+.cpu i {
+  margin-right: 4px;
+  color: #a1b56c;
+}
+
+.cpu i.high {
+  color: #ab4642;
+}
+
+.cpu i.medium {
+  color: #ba8baf;
+}
+
+.cpu i.light {
+  color: #f7ca88;
+}
+
+.memory {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.memory .text {
+  background: #181818;
+  color: #d8d8d8;
+}
+
+.memory i {
+  margin-right: 4px;
+  color: #a1b56c;
+}
+
+.memory i.high {
+  color: #ab4642;
+}
+
+.memory i.medium {
+  color: #ba8baf;
+}
+
+.memory i.light {
+  color: #f7ca88;
+}
+
+.audio {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.audio .text {
+  background: #181818;
+  color: #d8d8d8;
+}
+
+.audio i {
+  margin-right: 4px;
+  color: #d8d8d8;
+}
+
+.audio i.high {
+  color: #ab4642;
+}
+
+.audio i.medium {
+  color: #ba8baf;
+}
+
+.audio i.light {
+  color: #f7ca88;
+}
+
+.battery {
+  display: inline-flex;
+  align-items: center;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.battery .text {
+  background: #181818;
+  color: #d8d8d8;
+}
+
+.battery i {
+  margin-right: 4px;
+  color: #ab4642;
+}
+
+.battery i.high {
+  color: #a1b56c;
+}
+
+.battery i.medium {
+  color: #f7ca88;
+}
+
+.battery i.light {
+  color: #ba8baf;
+}
+
+.network_down {
+  background: #181818;
+  color: #d8d8d8;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.network_down i {
+  background: #181818;
+  color: #7cafc2;
+  margin-right: 8px;
+}
+
+.network_up {
+  background: #181818;
+  color: #d8d8d8;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.network_up i {
+  background: #181818;
+  color: #86c1b9;
+  margin-right: 8px;
+}
+
+.date {
+  background: #181818;
+  color: #f8f8f8;
+  margin-left: 4px;
+  margin-right: 4px;
+  border: 2px solid #585858;
+  border-radius: 4px;
+  padding: 4px;
+}
+
+.date i {
+  background: #181818;
+  color: #f8f8f8;
+  margin-right: 4px;
+}
