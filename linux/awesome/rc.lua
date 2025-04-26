@@ -136,7 +136,7 @@ do
     awful.layout.suit.corner.sw,
     awful.layout.suit.corner.se,
   }
-  menubar.utils.terminal = "xterm"
+  menubar.utils.terminal = "kitty"
 
   -- Wibar
   awful.screen.connect_for_each_screen(function(s)
@@ -237,7 +237,7 @@ do
       awful.screen.focused().promptbox:run()
     end),
     awful.key({ modkey }, "Return", function()
-      awful.spawn("xterm")
+      awful.spawn("kitty")
     end),
     awful.key({ modkey, "Shift" }, "Return", function()
       awful.spawn("emacs")
