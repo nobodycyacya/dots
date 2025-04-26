@@ -1,11 +1,11 @@
 #!/usr/bin/env sh
 
 options=(
-	style=round
-	width=6.0
-	hidpi=off
-	active_color="gradient(top_left=0xff7cafc2,bottom_right=0xfff7ca88)"
-	inactive_color="gradient(top_left=0xff181818,bottom_right=0xff585858)"
-	background_color=0xff181818
+  style=round
+  width=6.0
+  hidpi=off
+  active_color="gradient(top_left=0xff7cafc2,bottom_right=0xfff7ca88)"
+  inactive_color="gradient(top_left=0xff181818,bottom_right=0xff585858)"
+  background_color=0xff181818
 )
 borders "${options[@]}"
