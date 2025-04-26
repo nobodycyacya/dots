@@ -7,8 +7,8 @@
 }
 
 window#waybar {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #181818;
+  color: #d8d8d8;
   padding: 0;
 }
 
@@ -25,31 +25,31 @@ window#waybar {
 
 /*LEFT*/
 #custom-arch {
-  background: #111111;
-  color: #a6da95;
+  background: #181818;
+  color: #7cafc2;
 }
 #workspaces button {
-  background-color: #000000;
-  color: #ffffff;
+  background-color: #181818;
+  color: #d8d8d8;
 }
 #workspaces button:hover {
-  color: #ffffff;
-  background-color: #000000;
+  color: #d8d8d8;
+  background-color: #181818;
 }
 #workspaces button.active {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ed8796;
+  color: #ab4642;
   margin-left: 2px;
   margin-right: 2px;
 }
 #workspaces button.urgent {
-  background-color: #000000;
+  background-color: #181818;
   color: #ff0000;
 }
 #window {
-  color: #ffffff;
+  color: #d8d8d8;
   font-size: 16px;
   margin-left: 8px;
   margin-right: 8px;
@@ -57,128 +57,128 @@ window#waybar {
 
 /*RIGHT*/
 #cpu {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #cpu.idle {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #cpu.normal {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #eed49f;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #cpu.warning {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #f5a97f;
+  color: #f7ca88;
   padding: 4px 8px;
 }
 #cpu.critical {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ed8796;
+  color: #ab4642;
   padding: 4px 8px;
 }
 #memory {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #memory.idle {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #memory.normal {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #eed49f;
+  color: #a1b56c;
   padding: 4px 8px;
 }
 #memory.warning {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #f5a97f;
+  color: #f7ca88;
   padding: 4px 8px;
 }
 #memory.critical {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ed8796;
+  color: #ab4642;
   padding: 4px 8px;
 }
 #backlight {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ffffff;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
 #pulseaudio {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ffffff;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
 #battery {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #battery.charging {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #a6da95;
+  color: #7cafc2;
   padding: 4px 8px;
 }
 #battery.critical {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ed8796;
+  color: #ab4642;
   padding: 4px 8px;
 }
 #battery.warning {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #f5a97f;
+  color: #f7ca88;
   padding: 4px 8px;
 }
 #clock {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ffffff;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
 #tray {
-  background: #111111;
-  border: 2px solid #494d64;
+  background: #181818;
+  border: 2px solid #585858;
   border-radius: 8px;
-  color: #ffffff;
+  color: #d8d8d8;
   padding: 4px 8px;
 }
