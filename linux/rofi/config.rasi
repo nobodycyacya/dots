@@ -11,12 +11,12 @@ configuration {
 }
 * {
   font: "RobotoMono Nerd Font 12";
-  background: #11111bFF;
-  background-alt: #1e1e2eFF;
-  foreground: #ffffffFF;
-  selected: #a6da95FF;
-  active: #ffffffFF;
-  urgent: #ed8796FF;
+  background: #181818FF;
+  background-alt: #585858FF;
+  foreground: #d8d8d8FF;
+  selected: #a1b56cFF;
+  active: #d8d8d8FF;
+  urgent: #ab4642FF;
   border-colour: var(selected);
   handle-colour: var(selected);
   background-colour: var(background);
