@@ -1,4 +1,4 @@
-! GENERAL
+! General
 Xft.dpi: 96
 Xft.antialias: true
 Xft.hinting: true
@@ -7,7 +7,7 @@ Xft.autohint: true
 Xft.hintstyle: hintfull
 Xft.lcdfilter: lcdfilter
 
-! XTERM
+! XTerm
 XTerm*renderFont: true
 XTerm*faceName: xft:JetBrainsMono Nerd Font:style=Regular:size=12
 XTerm*faceSize: 12
@@ -17,7 +17,7 @@ XTerm*loginshell: true
 XTerm*savelines: 5000
 XTerm*charClass: 33:48,36-47:48,58-59:48,61:48,63-64:48,95:48,126:48
 
-! URXVT
+! rxvt-unicode
 URxvt*imLocale: en_US.UTF-8
 URxvt*termName: rxvt-unicode-256color
 URxvt*buffered: false
@@ -28,31 +28,23 @@ URxvt.scrollBar: false
 URxvt.cursorColor: white
 URxvt*depth: 32
 
-! THEME
-*background: #1e1e2e
-*foreground: #cdd6f4
-*cursorColor: #f5e0dc
-! BLACK
-*color0: #45475a
-*color8: #585b70
-! RED
-*color1: #f38ba8
-*color9: #f38ba8
-! GREEN
-*color2: #a6e3a1
-*color10: #a6e3a1
-! YELLOW
-*color3: #f9e2af
-*color11: #f9e2af
-! BLUE
-*color4: #89b4fa
-*color12: #89b4fa
-! MAGENTA
-*color5: #f5c2e7
-*color13: #f5c2e7
-! CYAN
-*color6: #94e2d5
-*color14: #94e2d5
-! WHITE
-*color7: #bac2de
-*color15: #a6adc8
+! Theme
+*background: #181818
+*foreground: #d8d8d8
+*cursorColor: #ab4642
+*color0: #181818
+*color1: #ab4642
+*color2: #a1b56c
+*color3: #f7ca88
+*color4: #7cafc2
+*color5: #ba8baf
+*color6: #86c1b9
+*color7: #d8d8d8
+*color8: #585858
+*color9: #ab4642
+*color10: #a1b56c
+*color11: #f7ca88
+*color12: #7cafc2
+*color13: #ba8baf
+*color14: #86c1b9
+*color15: #f8f8f8
