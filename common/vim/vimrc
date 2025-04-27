@@ -413,14 +413,14 @@ augroup END
 
 nnoremap <silent><leader> :<C-u>WhichKey '<space>'<cr>
 nnoremap <silent><localleader> :<C-u>WhichKey ','<cr>
-let g:EasyMotion_do_mapping=0
+let g:EasyMotion_do_mapping = 0
 nmap <leader>gl <Plug>(easymotion-overwin-line)
 nmap <leader>gw <Plug>(easymotion-overwin-w)
 nnoremap <leader>tu :UndotreeToggle<cr>
 let g:NERDTreeWinSize = 23
 let g:NERDTreeShowHidden = 1
 nnoremap <leader>tn :NERDTreeToggle<cr>
-let g:fzf_layout={ 'down': '40%' }
+let g:fzf_layout = { 'down': '40%' }
 nnoremap <leader>ff :Files<cr>
 nnoremap <leader>fF :Files ~/<cr>
 nnoremap <leader>fb :Buffers<cr>
