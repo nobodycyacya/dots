@@ -55,6 +55,7 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+set shortmess+=I
 set nobackup
 set noswapfile
 set termguicolors
@@ -164,19 +165,15 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | 
 " Install plugins
 call plug#begin()
 Plug 'sheerun/vim-polyglot', { 'on': [] }
-Plug 'mhinz/vim-startify', { 'on': [] }
 Plug 'morhetz/gruvbox', { 'on': [] }
 Plug 'ryanoasis/vim-devicons', { 'on': [] }
 Plug 'vim-airline/vim-airline', { 'on': [] }
 Plug 'Yggdroot/indentLine', { 'on': [] }
 Plug 'ntpeters/vim-better-whitespace', { 'on': [] }
 Plug 'machakann/vim-highlightedyank', { 'on': [] }
-Plug 'blueyed/vim-diminactive', { 'on': [] }
-Plug 'wincent/terminus', { 'on': [] }
 Plug 'LunarWatcher/auto-pairs', { 'on': [] }
 Plug 'luochen1990/rainbow', { 'on': [] }
 Plug 'tpope/vim-commentary', { 'on': [] }
-Plug 'tpope/vim-surround', { 'on': [] }
 Plug 'wellle/context.vim', { 'on': [] }
 Plug 'andymass/vim-matchup', { 'on': [] }
 Plug 'dominikduda/vim_current_word', { 'on': [] }
@@ -186,27 +183,18 @@ Plug 'ap/vim-css-color', { 'on': [] }
 Plug 'kana/vim-textobj-user', { 'on': [] }
 Plug 'kana/vim-textobj-indent', { 'on': [] }
 Plug 'glts/vim-textobj-comment', { 'on': [] }
-Plug 'justinmk/vim-sneak', { 'on': [] }
-Plug 'romainl/vim-cool', { 'on': [] }
 Plug 'mg979/vim-visual-multi', { 'branch': 'master', 'on': [] }
 Plug 'liuchengxu/vim-which-key', { 'on': ['WhichKey', 'WhichKey!'] }
 Plug 'easymotion/vim-easymotion', { 'on': ['<Plug>(easymotion-overwin-line)', '<Plug>(easymotion-overwin-w)', '<Plug>(easymotion-bd-jk)', '<Plug>(easymotion-bd-w)'] }
 Plug 'mbbill/undotree', { 'on': ['UndotreeToggle'] }
-Plug 'thinca/vim-quickrun', { 'on': ['QuickRun'] }
 Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle'] }
 Plug 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle'] }
-Plug 'tpope/vim-fugitive', { 'on': ['G', 'Git'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Colors', 'Lines', 'BLines', 'History', 'Commands', 'Rg'] }
-Plug 'junegunn/limelight.vim', { 'on': ['Limelight'] }
-Plug 'junegunn/goyo.vim', { 'on': ['Goyo'] }
 Plug 'dyng/ctrlsf.vim', { 'on': ['CtrlSF'] }
-Plug 'lambdalisue/vim-suda', { 'on': ['SudaRead', 'SudaWrite'] }
-Plug 'liuchengxu/vista.vim', { 'on': ['Vista', 'Vista!', 'Vista!!'] }
 Plug 'dstein64/vim-startuptime', { 'on': ['StartupTime'] }
-Plug 'voldikss/vim-floaterm', { 'on': ['FloatermNew', 'FloatermToggle'] }
-Plug 'metakirby5/codi.vim', { 'on': ['Codi'] }
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+Plug 'sbdchd/neoformat', { 'on': ['Neoformat'] }
 Plug 'prabirshrestha/asyncomplete.vim', { 'on': [] }
 Plug 'prabirshrestha/asyncomplete-buffer.vim', { 'on': [] }
 Plug 'prabirshrestha/asyncomplete-file.vim', { 'on': [] }
@@ -215,8 +203,6 @@ Plug 'prabirshrestha/vim-lsp', { 'on': [] }
 Plug 'mattn/vim-lsp-settings', { 'on': ['LspInstallServer', 'LspManageServers'] }
 Plug 'hrsh7th/vim-vsnip', { 'on': [] }
 Plug 'hrsh7th/vim-vsnip-integ', { 'on': [] }
-Plug 'sbdchd/neoformat', { 'on': ['Neoformat'] }
-Plug 'puremourning/vimspector', { 'on': ['VimspectorInstall', 'VimspectorUpdate', '<Plug>VimspectorContinue', '<Plug>VimspectorBreakpoints', '<Plug>VimspectorToggleBreakpoint'] }
 call plug#end()
 
 " Plugin settings
@@ -224,13 +210,6 @@ augroup syntax_vim_polyglot
   autocmd!
   autocmd InsertEnter * call plug#load('vim-polyglot')
         \| autocmd! syntax_vim_polyglot
-augroup END
-
-augroup ui_vim_startify
-  autocmd!
-  autocmd BufEnter * call plug#load('vim-startify')
-        \| autocmd! ui_vim_startify
-        \| let g:startify_custom_header = []
 augroup END
 
 augroup ui_gruvbox
@@ -274,20 +253,6 @@ augroup editor_vim_highlightedyank
         \| let g:highlightedyank_highlight_duration = 1000
 augroup END
 
-augroup ui_vim_diminactive
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-diminactive')
-        \| autocmd! ui_vim_diminactive
-        \| let g:diminactive_filetype_blacklist = ['startify']
-        \| DimInactive
-augroup END
-
-augroup editor_terminus
-  autocmd!
-  autocmd InsertEnter * call plug#load('terminus')
-        \| autocmd! editor_terminus
-augroup END
-
 augroup editor_auto_pairs
   autocmd!
   autocmd InsertEnter * call plug#load('auto-pairs')
@@ -307,12 +272,6 @@ augroup tool_vim_commentary
   autocmd!
   autocmd BufReadPost * call plug#load('vim-commentary')
         \| autocmd! tool_vim_commentary
-augroup END
-
-augroup tool_vim_surround
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-surround')
-        \| autocmd! tool_vim_surround
 augroup END
 
 augroup editor_context_vim
@@ -363,83 +322,11 @@ augroup editor_vim_textobj
         \| autocmd! editor_vim_textobj
 augroup END
 
-augroup editor_vim_sneak
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-sneak')
-        \| autocmd! editor_vim_sneak
-augroup END
-
-augroup editor_vim_cool
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-cool')
-        \| autocmd! editor_vim_cool
-augroup END
-
 augroup tool_vim_visual_multi
   autocmd!
   autocmd BufReadPost * call plug#load('vim-visual-multi')
         \| autocmd! tool_vim_visual_multi
 augroup END
-
-" editor_whith_key
-nnoremap <silent><leader> :<C-u>WhichKey '<space>'<cr>
-nnoremap <silent><localleader> :<C-u>WhichKey ','<cr>
-
-" tool_easymotion
-let g:EasyMotion_do_mapping=0
-nmap <leader>gl <Plug>(easymotion-overwin-line)
-nmap <leader>gw <Plug>(easymotion-overwin-w)
-
-" tool_undotree
-nnoremap <leader>tu :UndotreeToggle<cr>
-
-" tool_quickrun
-nnoremap <leader>RR :QuickRun<cr>
-
-" tool_nerdtree
-let g:NERDTreeWinSize = 23
-let g:NERDTreeShowHidden = 1
-nnoremap <leader>tn :NERDTreeToggle<cr>
-
-" tool_fzf
-let g:fzf_layout={ 'down': '30%' }
-nnoremap <leader>ff :Files<cr>
-nnoremap <leader>fF :Files ~/<cr>
-nnoremap <leader>fb :Buffers<cr>
-nnoremap <leader>fw :Rg<cr>
-nnoremap <leader>fs :BLines<cr>
-nnoremap <leader>fr :History<cr>
-nnoremap <leader>fc :Colors<cr>
-nnoremap <leader><leader> :Commands<cr>
-
-" tool_goyo_limelight
-let g:limelight_conceal_ctermfg = 'gray'
-let g:limelight_conceal_ctermfg = 240
-let g:limelight_default_coefficient = 0.7
-augroup launch_limelight_when_goyo_enter
-  autocmd!
-  autocmd! User GoyoEnter Limelight
-augroup END
-augroup disable_limelight_when_goyo_leave
-  autocmd!
-  autocmd! User GoyoLeave Limelight!
-augroup END
-
-" tool_vista
-let g:vista_default_executive = 'vim_lsp'
-nnoremap <leader>tv :Vista!!<cr>
-
-" tool_floaterm
-let g:floaterm_wintype = 'split'
-let g:floaterm_height = 0.3
-nnoremap <silent> <F7> :FloatermNew<cr>
-tnoremap <silent> <F7> <C-\><C-n>:FloatermNew<cr>
-nnoremap <silent> <F8> :FloatermPrev<cr>
-tnoremap <silent> <F8> <C-\><C-n>:FloatermPrev<cr>
-nnoremap <silent> <F9> :FloatermNext<cr>
-tnoremap <silent> <F9> <C-\><C-n>:FloatermNext<cr>
-nnoremap <silent> <F12> :FloatermToggle<cr>
-tnoremap <silent> <F12> <C-\><C-n>:FloatermToggle<cr>
 
 augroup completion_lsp_snippet
   autocmd!
@@ -523,3 +410,22 @@ augroup lsp_install
   autocmd!
   autocmd User lsp_buffer_enabled call s:on_lsp_buffer_enabled()
 augroup END
+
+nnoremap <silent><leader> :<C-u>WhichKey '<space>'<cr>
+nnoremap <silent><localleader> :<C-u>WhichKey ','<cr>
+let g:EasyMotion_do_mapping=0
+nmap <leader>gl <Plug>(easymotion-overwin-line)
+nmap <leader>gw <Plug>(easymotion-overwin-w)
+nnoremap <leader>tu :UndotreeToggle<cr>
+let g:NERDTreeWinSize = 23
+let g:NERDTreeShowHidden = 1
+nnoremap <leader>tn :NERDTreeToggle<cr>
+let g:fzf_layout={ 'down': '40%' }
+nnoremap <leader>ff :Files<cr>
+nnoremap <leader>fF :Files ~/<cr>
+nnoremap <leader>fb :Buffers<cr>
+nnoremap <leader>fw :Rg<cr>
+nnoremap <leader>fs :BLines<cr>
+nnoremap <leader>fr :History<cr>
+nnoremap <leader>fc :Colors<cr>
+nnoremap <leader><leader> :Commands<cr>
