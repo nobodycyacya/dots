@@ -48,8 +48,8 @@ keys = [
     Key([], "XF86AudioRaiseVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ +5%"), desc="Raise Volume"),
     Key([], "XF86AudioLowerVolume", lazy.spawn("pactl set-sink-volume @DEFAULT_SINK@ -5%"), desc="Lower Volume"),
     Key([], "XF86AudioMute", lazy.spawn("pactl set-sink-mute @DEFAULT_SINK@ toggle"), desc="Audio Mute"),
-    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s +5%"), desc="Lower Monitor Brightness"),
-    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s 5%-"), desc="Raise Monitor Brightness")
+    Key([], "XF86MonBrightnessDown", lazy.spawn("brightnessctl s 5%-"), desc="Lower Monitor Brightness"),
+    Key([], "XF86MonBrightnessUp", lazy.spawn("brightnessctl s +5%"), desc="Raise Monitor Brightness")
 ]
 
 for vt in range(1, 8):
