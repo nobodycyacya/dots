@@ -361,10 +361,10 @@ augroup completion_lsp_snippet
         \ 'whitelist': ['c', 'cpp']
         \ })
         \| endif
-        \| if executable('pylsp')
+        \| if executable('basedpyright')
         \| call lsp#register_server({
-        \ 'name': 'pylsp',
-        \ 'cmd': { server_info -> ['pylsp'] },
+        \ 'name': 'basedpyright',
+        \ 'cmd': { server_info -> ['basedpyright-langserver', '--stdio'] },
         \ 'whitelist': ['python']
         \ })
         \| endif
