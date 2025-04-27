@@ -235,7 +235,7 @@ augroup END
 
 augroup ui_gruvbox
   autocmd!
-  autocmd BufReadPost,BufEnter * call plug#load('gruvbox')
+  autocmd BufReadPost * call plug#load('gruvbox')
         \| autocmd! ui_gruvbox
         \| colorscheme gruvbox
 augroup END
@@ -248,7 +248,7 @@ augroup END
 
 augroup ui_vim_airline
   autocmd!
-  autocmd BufReadPost,BufEnter * call plug#load('vim-airline')
+  autocmd BufReadPost * call plug#load('vim-airline')
         \| autocmd! ui_vim_airline
         \| let g:airline_extensions = ['branch', 'tabline']
 augroup END
