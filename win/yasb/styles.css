@@ -1,0 +1,130 @@
+QToolTip {
+    padding: 4px;
+    color: #d8d8d8;
+    font-size: 11px;
+    background-color: #181818;
+    border: 0px solid #181818;
+    border-radius: 4px;
+}
+
+* {
+    font-size: 10px;
+    color: #d8d8d8;
+    font-weight: 800;
+    font-family: "Segoe UI", "JetBrainsMono NFP";
+    margin: 0;
+    padding: 0;
+}
+
+.icon {
+    font-size: 13px;
+}
+
+.yasb-bar {
+    padding: 0;
+    margin: 0;
+    background-color: #181818;
+    border-radius: 0px;
+}
+
+.widget {
+    padding: 0px 4px;
+    margin: 0;
+}
+
+.widget .label {
+    padding: 0px 4px;
+}
+
+/* Left */
+.home-widget {
+    padding: 0 4px 0 12px;
+}
+
+.home-widget .icon {
+    color: #ba8baf;
+}
+
+.home-widget .icon:hover {
+    font-weight: 900;
+}
+
+.home-menu {
+    background-color: #181818;
+}
+
+.home-menu .menu-item {
+    padding: 8px 20px 8px 20px;
+    font-size: 11px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #d8d8d8;
+    font-weight: 600;
+}
+
+.home-menu .menu-item:hover {
+    background-color: #585858;
+    color: #d8d8d8;
+}
+
+.home-menu:separator {
+    height: 1px;
+    background-color: #585858;
+}
+
+.komorebi-workspaces {
+    padding: 4px;
+}
+
+.komorebi-workspaces .ws-btn {
+    padding: 4px 8px;
+    background-color: #181818;
+    color: #d8d8d8;
+    border: 2px #585858;
+    border-radius: 4px;
+}
+
+.komorebi-workspaces .ws-btn.active {
+    background-color: #a1b56c;
+    color: #181818;
+}
+
+/* Right */
+.cpu-widget {
+    padding: 2px 2px;
+}
+
+.cpu-widget .icon {
+    color: #f7ca88;
+}
+
+.memory-widget {
+    padding: 2px 2px;
+}
+
+.memory-widget .icon {
+    color: #86c1b9;
+}
+
+.battery-widget {
+    padding: 2px 2px;
+}
+
+.battery-widget .icon {
+    color: #a1b56c;
+}
+
+.volume-widget {
+    padding: 2px 2px;
+}
+
+.volume-widget .icon {
+    color: #dc9656;
+}
+
+.clock-widget {
+    padding: 2px 2px;
+}
+
+.clock-widget .widget-container .icon {
+    color: #ba8baf;
+}
