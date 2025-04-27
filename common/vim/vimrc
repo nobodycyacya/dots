@@ -334,6 +334,8 @@ augroup editor_vim_current_word
   autocmd BufReadPost * call plug#load('vim_current_word')
         \| autocmd! editor_vim_current_word
         \| let g:vim_current_word#highlight_delay = 200
+        \| highlight CurrentWord ctermbg=240
+        \| highlight CurrentWordTwins ctermbg=242
 augroup END
 
 augroup tool_vim_gitgutter
