@@ -172,10 +172,10 @@ body,
 }
 
 .cpu i.medium {
-  color: #ba8baf;
+  color: #dc9656;
 }
 
-.cpu i.light {
+.cpu i.low {
   color: #f7ca88;
 }
 
@@ -204,10 +204,10 @@ body,
 }
 
 .memory i.medium {
-  color: #ba8baf;
+  color: #dc9656;
 }
 
-.memory i.light {
+.memory i.low {
   color: #f7ca88;
 }
 
@@ -236,10 +236,10 @@ body,
 }
 
 .audio i.medium {
-  color: #ba8baf;
+  color: #dc9656;
 }
 
-.audio i.light {
+.audio i.low {
   color: #f7ca88;
 }
 
@@ -271,8 +271,8 @@ body,
   color: #f7ca88;
 }
 
-.battery i.light {
-  color: #ba8baf;
+.battery i.low {
+  color: #dc9656;
 }
 
 .network_down {
@@ -309,7 +309,7 @@ body,
 
 .date {
   background: #181818;
-  color: #f8f8f8;
+  color: #d8d8d8;
   margin-left: 4px;
   margin-right: 4px;
   border: 2px solid #585858;
@@ -319,6 +319,6 @@ body,
 
 .date i {
   background: #181818;
-  color: #f8f8f8;
+  color: #d8d8d8;
   margin-right: 4px;
 }
