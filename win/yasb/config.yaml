@@ -1,10 +1,6 @@
 watch_stylesheet: true
 watch_config: true
 debug: false
-komorebi:
-  start_command: "komorebic start --whkd"
-  stop_command: "komorebic stop --whkd"
-  reload_command: "komorebic stop --whkd && komorebic start --whkd"
 bars:
   primary-bar:
     enabled: true
@@ -15,7 +11,7 @@ bars:
       center: false
     animation:
       enabled: true
-      duration: 2000
+      duration: 1000
     blur_effect:
       enabled: false
       acrylic: false
@@ -28,7 +24,7 @@ bars:
       windows_app_bar: true
     dimensions:
       width: "100%"
-      height: 32
+      height: 30
     padding:
       top: 0
       left: 0
@@ -37,11 +33,12 @@ bars:
     widgets:
       left: [
         "home",
-        "komorebi_workspaces",
+        "glazewm_workspaces",
         "active_window",
       ]
       center: []
       right: [
+        "glazewm_tiling_direction",
         "cpu",
         "memory",
         "battery",
@@ -49,67 +46,105 @@ bars:
         "clock",
       ]
 widgets:
+  # Left
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\udb81\udf17</span>"
+      label: "<span>\ue62a</span>"
       menu_list:
-      - { title: "User Home", path: "~" }
-      - { title: "Download", path: "~\\Downloads" }
-      - { title: "Documents", path: "~\\Documents" }
-      - { title: "Pictures", path: "~\\Pictures" }
+        - { title: "  Home", path: "~" }
+        - { title: "  Download", path: "~\\Downloads" }
+        - { title: "󰧮  Documents", path: "~\\Documents" }
+        - { title: "  Pictures", path: "~\\Pictures" }
+      menu_labels: {
+        'shutdown': '󰐥  Shutdown',
+        'restart': '  Restart',
+        'logout': '󰍃  Logout',
+        'lock': '  Lock',
+        'sleep': '󰒲  Sleep',
+        'system': '  System Settings',
+        'about': '  About This PC',
+        'task_manager': '󰕮  Task Manager'
+      }
       system_menu: true
       power_menu: true
-      blur: false
-  komorebi_workspaces:
-    type: "komorebi.workspaces.WorkspaceWidget"
+      blur: true
+      round_corners: true
+      round_corners_type: "normal"
+      border_color: "System"
+      container_padding: 
+        top: 0
+        left: 4
+        bottom: 0
+        right: 4
+      alignment: "left"
+      direction: "down"
+  glazewm_workspaces:
+    type: "glazewm.workspaces.GlazewmWorkspacesWidget"
     options:
-      label_offline: ""
-      label_workspace_btn: "{name}"
-      label_workspace_active_btn: "{name}"
-      label_workspace_populated_btn: "{name}"
-      label_default_name: ""
-      label_zero_index: false
+      offline_label: "GlazeWM Offline"
       hide_empty_workspaces: true
       hide_if_offline: true
-      animation: false
   active_window:
     type: "yasb.active_window.ActiveWindowWidget"
     options:
       label: "{win[title]}"
-      label_alt: "[class_name='{win[class_name]}' exe='{win[process][name]}' hwnd={win[hwnd]}]"
       label_no_window: ""
       label_icon: true
-      label_icon_size: 12
-      max_length: 56
+      label_icon_size: 16
+      max_length: 60
       max_length_ellipsis: "..."
       monitor_exclusive: false
+  # Right
+  glazewm_tiling_direction:
+    type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
+    options:
+      horizontal_label: "\udb81\udce1"
+      vertical_label: "\udb81\udce2"
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
       label: "<span></span> {info[percent][total]}%"
       update_interval: 1500
-      callbacks:
-        on_right: "exec cmd /c Taskmgr"
   memory:
     type: "yasb.memory.MemoryWidget"
     options:
-      label: "<span></span>{virtual_mem_percent}%"
+      label: "<span></span> {virtual_mem_percent}%"
       update_interval: 1500
+      memory_thresholds:
+        low: 30
+        medium: 50
+        high: 80
   battery:
     type: "yasb.battery.BatteryWidget"
     options:
-      label: "<span>󱈏</span>{percent}%"
+      label: "<span>{icon}</span>{percent}%"
+      charging_options:
+        icon_format: "{charging_icon}"
+      status_icons: {
+        icon_charging: '󰂄',
+        icon_critical: '󰁺',
+        icon_low: '󰁼',
+        icon_medium: '󰁾',
+        icon_high: '󰂀', 
+        icon_full: '󰁹'
+      }
   volume:
     type: "yasb.volume.VolumeWidget"
     options:
-      label: "<span></span> {level}"
+      label: "<span>{icon}</span> {level}"
+      label_alt: "{volume}"
+      tooltip: false
+      volume_icons:
+        - ""
+        - ""
+        - ""
+        - ""
+        - ""
       callbacks:
         on_left: "toggle_mute"
         on_right: "exec cmd.exe /c start ms-settings:sound"
   clock:
     type: "yasb.clock.ClockWidget"
     options:
-      label: "<span>󰃰</span>{%Y-%m-%d %H:%M}"
-      callbacks:
-        on_left: "toggle_label"
+      label: "<span>󰃰</span> {%Y-%m-%d %H:%M}"
