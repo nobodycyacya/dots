@@ -160,18 +160,11 @@ arch-chroot /mnt systemctl enable bluetooth.service
 echo "Bluetooth services are enabled."
 
 # Official pakcage
-WM="awesome xorg-xinit xorg-server"
 SYSTOOL1="brightnessctl pulseaudio pulseaudio-alsa pamixer xclip fastfetch udiskie"
-SYSTOOL2="blueman polkit-kde-agent alsa-utils flatpak btop"
-SYSTOOL3="redshift flameshot unzip p7zip rofi tmux arandr"
-INPUT="ibus ibus-chewing"
-RUST="lsd ripgrep bottom fzf fd bat rust"
-JS="npm"
-TERM="xterm rxvt-unicode foot"
-EDITOR="emacs neovim gvim"
-GUITOOL="pcmanfm lxappearance qt5ct"
-arch-chroot /mnt sudo pacman -S --noconfirm --needed $WM $SYSTOOL1 $SYSTOOL2 $SYSTOOL3
-arch-chroot /mnt sudo pacman -S --noconfirm --needed $INPUT $RUST $TERM $EDITOR $GUITOOL $JS
+SYSTOOL2="blueman polkit-kde-agent alsa-utils flatpak btop npm kitty ibus ibus-chewing gvim"
+SYSTOOL3="redshift flameshot unzip p7zip tmux arandr fzf lsd ripgrep"
+SYSTOOL4="pcmanfm lxappearance qt5ct awesome xorg-xinit xorg-server"
+arch-chroot /mnt sudo pacman -S --noconfirm --needed $SYSTOOL1 $SYSTOOL2 $SYSTOOL3 $SYSTOOL4
 ADOBE1="adobe-source-code-pro-fonts	adobe-source-han-sans-cn-fonts adobe-source-han-sans-hk-fonts"
 ADOBE2="adobe-source-han-sans-jp-fonts adobe-source-han-sans-kr-fonts adobe-source-han-sans-otc-fonts"
 ADOBE3="adobe-source-han-sans-tw-fonts adobe-source-han-serif-cn-fonts"
