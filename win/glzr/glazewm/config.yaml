@@ -1,10 +1,13 @@
 general:
-  startup_commands: ['shell-exec zebar']
-  shutdown_commands: ['shell-exec taskkill /IM zebar.exe /F']
-  config_reload_commands: [
-    'shell-exec taskkill /IM zebar.exe /F',
-    'shell-exec zebar'
+  startup_commands: [
+    # 'shell-exec zebar'
+    'shell-exec yasb'
   ]
+  shutdown_commands: [
+    # 'shell-exec taskkill /IM zebar.exe /F'
+    'shell-exec taskkill /IM yasb.exe /F'
+  ]
+  config_reload_commands: []
   focus_follows_cursor: false
   toggle_workspace_on_refocus: false
   cursor_jump:
@@ -17,7 +20,7 @@ gaps:
   scale_with_dpi: true
   inner_gap: '4px'
   outer_gap:
-    top: '40px'
+    top: '4px'
     right: '4px'
     bottom: '4px'
     left: '4px'
@@ -55,33 +58,43 @@ window_behavior:
 workspaces:
   - name: '1'
     bind_to_monitor: 0
+    display_name: "1"
     keep_alive: false
   - name: '2'
     bind_to_monitor: 0
+    display_name: "2"
     keep_alive: false
   - name: '3'
     bind_to_monitor: 0
+    display_name: "3"
     keep_alive: false
   - name: '4'
     bind_to_monitor: 0
+    display_name: "4"
     keep_alive: false
   - name: '5'
     bind_to_monitor: 0
+    display_name: "5"
     keep_alive: false
   - name: '6'
     bind_to_monitor: 1
+    display_name: "6"
     keep_alive: false
   - name: '7'
     bind_to_monitor: 1
+    display_name: "7"
     keep_alive: false
   - name: '8'
     bind_to_monitor: 1
+    display_name: "8"
     keep_alive: false
   - name: '9'
     bind_to_monitor: 1
+    display_name: "9"
     keep_alive: false
   - name: '10'
     bind_to_monitor: 1
+    display_name: "0"
     keep_alive: false
 
 window_rules:
@@ -112,6 +125,8 @@ binding_modes:
         bindings: ['escape', 'enter']
 
 keybindings:
+  - commands: ['shell-exec wt']
+    bindings: ['alt+shift+enter']
   - commands: ['focus --direction left']
     bindings: ['alt+h']
   - commands: ['focus --direction right']
@@ -144,8 +159,6 @@ keybindings:
     bindings: ['alt+shift+r']
   - commands: ['wm-redraw']
     bindings: ['alt+shift+w']
-  - commands: ['shell-exec wt']
-    bindings: ['alt+shift+enter']
   - commands: ['focus --workspace 1']
     bindings: ['alt+1']
   - commands: ['focus --workspace 2']
