@@ -1,0 +1,200 @@
+version: 7
+profiles: []
+groups: []
+configSync:
+  parts: {}
+hotkeys:
+  toggle-window: []
+  copy-current-path: []
+  ctrl-c:
+    - Ctrl-C
+  paste:
+    - Ctrl-Shift-V
+  select-all:
+    - Ctrl-A
+  zoom-in: []
+  zoom-out: []
+  reset-zoom: []
+  previous-word: []
+  next-word: []
+  delete-previous-word: []
+  delete-line: []
+  delete-next-word: []
+  search: []
+  pane-focus-all: []
+  focus-all-tabs: []
+  scroll-to-top: []
+  scroll-up: []
+  scroll-down: []
+  scroll-to-bottom: []
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings: []
+  serial: []
+  restart-serial-session: []
+  new-tab: []
+  new-window: []
+  profile: {}
+  profile-selectors: {}
+  toggle-fullscreen: []
+  close-tab: []
+  reopen-tab: []
+  toggle-last-tab: []
+  rename-tab: []
+  next-tab: []
+  previous-tab: []
+  move-tab-left: []
+  move-tab-right: []
+  rearrange-panes: []
+  tab-1: []
+  tab-2: []
+  tab-3: []
+  tab-4: []
+  tab-5: []
+  tab-6: []
+  tab-7: []
+  tab-8: []
+  tab-9: []
+  tab-10: []
+  duplicate-tab: []
+  restart-tab: []
+  reconnect-tab: []
+  disconnect-tab: []
+  explode-tab: []
+  combine-tabs: []
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right: []
+  split-bottom: []
+  split-left: []
+  split-top: []
+  pane-nav-right: []
+  pane-nav-down: []
+  pane-nav-up: []
+  pane-nav-left: []
+  pane-nav-previous: []
+  pane-nav-next: []
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize: []
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  profile-selector: []
+  switch-profile: []
+  command-selector: []
+  scroll-page-up: []
+  scroll-page-down: []
+  group-selectors: {}
+  close-pane: []
+  copy:
+    - Ctrl-Shift-C
+  home: []
+  end: []
+  clear: []
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Base16 Default Dark
+    foreground: '#d8d8d8'
+    background: '#181818'
+    cursor: '#d8d8d8'
+    colors:
+      - '#181818'
+      - '#ab4642'
+      - '#a1b56c'
+      - '#f7ca88'
+      - '#7cafc2'
+      - '#ba8baf'
+      - '#86c1b9'
+      - '#d8d8d8'
+      - '#585858'
+      - '#ab4642'
+      - '#a1b56c'
+      - '#f7ca88'
+      - '#7cafc2'
+      - '#ba8baf'
+      - '#86c1b9'
+      - '#f8f8f8'
+      - '#dc9656'
+      - '#a16946'
+      - '#282828'
+      - '#383838'
+      - '#b8b8b8'
+      - '#e8e8e8'
+  minimumContrastRatio: 0
+  font: JetBrainsMono Nerd Font
+  ligatures: true
+  fontWeight: 600
+  fontWeightBold: 900
+  fallbackFont: Monaco
+  altIsMeta: true
+  copyOnSelect: true
+  bell: visual
+  customColorSchemes: []
+  fontSize: 12
+  linePadding: 1.618
+  profile: local:powershell
+  scrollbackLines: 5000
+  lightColorScheme:
+    name: Solarized Light
+    foreground: '#536870'
+    background: '#fcf4dc'
+    cursor: '#536870'
+    colors:
+      - '#002831'
+      - '#d11c24'
+      - '#738a05'
+      - '#a57706'
+      - '#2176c7'
+      - '#c61c6f'
+      - '#259286'
+      - '#eae3cb'
+      - '#001e27'
+      - '#bd3613'
+      - '#475b62'
+      - '#536870'
+      - '#708284'
+      - '#5956ba'
+      - '#819090'
+      - '#fcf4dc'
+  showTabProfileIcon: true
+  paneResizeStep: 0.15
+ssh: {}
+clickableLinks: {}
+accessibility: {}
+appearance:
+  opacity: 0.88
+  tabsInFullscreen: true
+  flexTabs: true
+  lastTabClosesWindow: true
+hacks:
+  enableFluentBackground: true
+providerBlacklist: []
+commandBlacklist: []
+language: en-US
+enableWelcomeTab: false
+pluginBlacklist: []
+profileDefaults:
+  ssh:
+    disableDynamicTitle: true
+profileBlacklist: []
+enableAnalytics: false
