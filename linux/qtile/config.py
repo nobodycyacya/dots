@@ -19,7 +19,8 @@ def autostart():
         "ibus-daemon -drxR",
         "redshift -x && redshift -O 4500",
     ]
-    for cmd in commands:subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    for cmd in commands:
+        subprocess.Popen(cmd, shell=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
 
 mod = "mod4"
 keys = [
