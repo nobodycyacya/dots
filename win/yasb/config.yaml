@@ -50,7 +50,7 @@ widgets:
   home:
     type: "yasb.home.HomeWidget"
     options:
-      label: "<span>\ue62a</span>"
+      label: "<span></span>"
       menu_list:
         - { title: "  Home", path: "~" }
         - { title: "  Download", path: "~\\Downloads" }
@@ -99,8 +99,8 @@ widgets:
   glazewm_tiling_direction:
     type: "glazewm.tiling_direction.GlazewmTilingDirectionWidget"
     options:
-      horizontal_label: "\udb81\udce1"
-      vertical_label: "\udb81\udce2"
+      horizontal_label: "󰓡"
+      vertical_label: "󰓢"
   cpu:
     type: "yasb.cpu.CpuWidget"
     options:
