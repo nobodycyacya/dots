@@ -1,3 +1,33 @@
+/* General */
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #282936;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
 * {
   font-family: "RobotoMono Nerd Font";
   font-weight: bold;
@@ -7,14 +37,52 @@
 }
 
 window#waybar {
-  background-color: #181818;
-  color: #d8d8d8;
+  background-color: var(--crust);
+  color: var(--text);
   padding: 0;
 }
 
+/*LEFT*/
 #arch,
 #workspaces,
 #window,
+#custom-arch {
+  background: var(--crust);
+  color: var(--pink);
+}
+
+#workspaces button {
+  background-color: var(--crust);
+  color: var(--text);
+}
+
+#workspaces button:hover {
+  color: var(--lavender);
+  background-color: var(--crust);
+}
+
+#workspaces button.active {
+  background: var(--green);
+  border: 2px solid var(--crust);
+  border-radius: 8px;
+  color: var(--base);
+  margin-left: 2px;
+  margin-right: 2px;
+}
+
+#workspaces button.urgent {
+  background-color: var(--crust);
+  color: var(--red);
+}
+
+#window {
+  color: var(--text);
+  font-size: 16px;
+  margin-left: 8px;
+  margin-right: 8px;
+}
+
+/*RIGHT*/
 #cpu,
 #memory,
 #backlignt,
@@ -23,162 +91,146 @@ window#waybar {
 #clock,
 #tray,
 
-/*LEFT*/
-#custom-arch {
-  background: #181818;
-  color: #7cafc2;
-}
-#workspaces button {
-  background-color: #181818;
-  color: #d8d8d8;
-}
-#workspaces button:hover {
-  color: #d8d8d8;
-  background-color: #181818;
-}
-#workspaces button.active {
-  background: #181818;
-  border: 2px solid #585858;
+#cpu {
+  background: var(--crust);
+  border: 2px solid var(--crsut);
   border-radius: 8px;
-  color: #ab4642;
-  margin-left: 2px;
-  margin-right: 2px;
-}
-#workspaces button.urgent {
-  background-color: #181818;
-  color: #ff0000;
-}
-#window {
-  color: #d8d8d8;
-  font-size: 16px;
-  margin-left: 8px;
-  margin-right: 8px;
+  color: var(--text);
+  padding: 4px 8px;
 }
 
-/*RIGHT*/
-#cpu {
-  background: #181818;
-  border: 2px solid #585858;
-  border-radius: 8px;
-  color: #d8d8d8;
-  padding: 4px 8px;
-}
 #cpu.idle {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--green);
   padding: 4px 8px;
 }
+
 #cpu.normal {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--green);
   padding: 4px 8px;
 }
+
 #cpu.warning {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #dc9656;
+  color: var(--peach);
   padding: 4px 8px;
 }
+
 #cpu.critical {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #ab4642;
+  color: var(--red);
   padding: 4px 8px;
 }
+
 #memory {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #d8d8d8;
+  color: var(--text);
   padding: 4px 8px;
 }
+
 #memory.idle {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--green);
   padding: 4px 8px;
 }
+
 #memory.normal {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--green);
   padding: 4px 8px;
 }
+
 #memory.warning {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #dc9656;
+  color: var(--peach);
   padding: 4px 8px;
 }
+
 #memory.critical {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #ab4642;
+  color: var(--red);
   padding: 4px 8px;
 }
+
 #backlight {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #f7ca88;
+  color: var(--yellow);
   padding: 4px 8px;
 }
+
 #pulseaudio {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #f7ca88;
+  color: var(--teal);
   padding: 4px 8px;
 }
+
 #battery {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--green);
   padding: 4px 8px;
 }
+
 #battery.charging {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #a1b56c;
+  color: var(--sapphire);
   padding: 4px 8px;
 }
+
 #battery.warning {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #f7ca88;
+  color: var(--peach);
   padding: 4px 8px;
 }
+
 #battery.critical {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #ab4642;
+  color: var(--red);
   padding: 4px 8px;
 }
+
 #clock {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #ba8baf;
+  color: var(--mauve);
   padding: 4px 8px;
 }
+
 #tray {
-  background: #181818;
-  border: 2px solid #585858;
+  background: var(--crust);
+  border: 2px solid var(--crust);
   border-radius: 8px;
-  color: #d8d8d8;
+  color: var(--text);
   padding: 4px 8px;
 }
