@@ -1,14 +1,43 @@
 @import 'https://www.nerdfonts.com/assets/css/webfont.css';
 
+:root {
+  --rosewater: #f5e0dc;
+  --flamingo: #f2cdcd;
+  --pink: #f5c2e7;
+  --mauve: #cba6f7;
+  --red: #f38ba8;
+  --maroon: #eba0ac;
+  --peach: #fab387;
+  --yellow: #f9e2af;
+  --green: #a6e3a1;
+  --teal: #94e2d5;
+  --sky: #89dceb;
+  --sapphire: #74c7ec;
+  --blue: #89b4fa;
+  --lavender: #b4befe;
+  --text: #cdd6f4;
+  --subtext1: #bac2de;
+  --subtext0: #a6adc8;
+  --overlay2: #9399b2;
+  --overlay1: #7f849c;
+  --overlay0: #6c7086;
+  --surface2: #585b70;
+  --surface1: #45475a;
+  --surface0: #282936;
+  --base: #1e1e2e;
+  --mantle: #181825;
+  --crust: #11111b;
+}
+
 i {
-  background: #181818;
-  color: #d8d8d8;
-  font-size: 11px;
+  background: var(--crust);
+  color: var(--text);
+  font-size: 13px;
 }
 
 body {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   font-family: 'Segoe UI', 'JetBrainsMono Nerd Font', ui-monospace, monospace;
   font-size: 11px;
   white-space: nowrap;
@@ -21,8 +50,8 @@ body,
 }
 
 #root {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
 }
 
 .app {
@@ -50,10 +79,10 @@ body,
 
 /* LEFT */
 .logo {
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
-  background: #3c3e4f;
-  color: #a1b56c;
+  background: var(--crust);
+  color: var(--rosewater);
   font-size: 13px;
   margin-left: 4px;
   margin-right: 4px;
@@ -66,34 +95,38 @@ body,
 }
 
 .workspace {
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
-  background: #3c3e4f;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   cursor: pointer;
+  font-weight: 600;
+  font-size: 12px;
   padding: 4px;
   margin: 2px;
 
   &.displayed {
-    border: 2px solid #585858;
+    border: 2px solid var(--crust);
     border-radius: 4px;
-    background: #3c3e4f;
-    color: #d8d8d8;
+    background: var(--crust);
+    color: var(--text);
     padding: 4px;
   }
 
   &.focused {
-    border: 2px solid #585858;
+    border: 2px solid var(--green);
     border-radius: 4px;
-    background: #3c3e4f;
-    color: #ab4642;
+    background: var(--green);
+    color: var(--base);
     padding: 4px;
   }
 }
 
 .title {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
+  font-weight: 600;
+  font-size: 12px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -104,10 +137,10 @@ body,
 
 /* RIGHT */
 .paused-button {
-  border: 2px solid #585858;
+  border: 2px solid var(--base);
   border-radius: 4px;
-  background: #181818;
-  color: #a1b56c;
+  background: var(--crust);
+  color: var(--maroon);
   font-weight: 700;
   padding: 4px 8px 4px 8px;
   margin-left: 4px;
@@ -116,14 +149,14 @@ body,
 
 .paused-button i {
   margin-right: 4px;
-  color: #a1b56c;
+  color: var(--maroon);
 }
 
 .binding-mode {
-  border: 2px solid #585858;
+  border: 2px solid var(--base);
   border-radius: 4px;
-  background: #181818;
-  color: #ab4642;
+  background: var(--crust);
+  color: var(--yellow);
   font-weight: 700;
   padding: 4px 8px 4px 8px;
   margin-left: 4px;
@@ -132,14 +165,14 @@ body,
 
 .binding-mode i {
   margin-right: 4px;
-  color: #ab4642;
+  color: var(--yellow);
 }
 
 .tiling-direction {
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
-  background: #181818;
-  color: #86c1b9;
+  background: var(--crust);
+  color: var(--teal);
   cursor: pointer;
   line-height: 1;
   padding: 4px 8px 4px 8px;
@@ -152,31 +185,31 @@ body,
   align-items: center;
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .cpu .text {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
 }
 
 .cpu i {
   margin-right: 4px;
-  color: #a1b56c;
+  color: var(--green);
 }
 
 .cpu i.high {
-  color: #ab4642;
+  color: var(--red);
 }
 
 .cpu i.medium {
-  color: #dc9656;
+  color: var(--peach);
 }
 
 .cpu i.low {
-  color: #f7ca88;
+  color: var(--yellow);
 }
 
 .memory {
@@ -184,31 +217,31 @@ body,
   align-items: center;
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .memory .text {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
 }
 
 .memory i {
   margin-right: 4px;
-  color: #a1b56c;
+  color: var(--green);
 }
 
 .memory i.high {
-  color: #ab4642;
+  color: var(--red);
 }
 
 .memory i.medium {
-  color: #dc9656;
+  color: var(--peach);
 }
 
 .memory i.low {
-  color: #f7ca88;
+  color: var(--yellow);
 }
 
 .audio {
@@ -216,31 +249,31 @@ body,
   align-items: center;
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .audio .text {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
 }
 
 .audio i {
   margin-right: 4px;
-  color: #d8d8d8;
+  color: var(--text);
 }
 
 .audio i.high {
-  color: #ab4642;
+  color: var(--red);
 }
 
 .audio i.medium {
-  color: #dc9656;
+  color: var(--peach);
 }
 
 .audio i.low {
-  color: #f7ca88;
+  color: var(--yellow);
 }
 
 .battery {
@@ -248,77 +281,77 @@ body,
   align-items: center;
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .battery .text {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
 }
 
 .battery i {
   margin-right: 4px;
-  color: #ab4642;
+  color: var(--red);
 }
 
 .battery i.high {
-  color: #a1b56c;
+  color: var(--green);
 }
 
 .battery i.medium {
-  color: #f7ca88;
+  color: var(--peach);
 }
 
 .battery i.low {
-  color: #dc9656;
+  color: var(--yellow);
 }
 
 .network_down {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .network_down i {
-  background: #181818;
-  color: #7cafc2;
+  background: var(--crust);
+  color: var(--teal);
   margin-right: 8px;
 }
 
 .network_up {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .network_up i {
-  background: #181818;
-  color: #86c1b9;
+  background: var(--crust);
+  color: var(--flamingo);
   margin-right: 8px;
 }
 
 .date {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   margin-left: 4px;
   margin-right: 4px;
-  border: 2px solid #585858;
+  border: 2px solid var(--crust);
   border-radius: 4px;
   padding: 4px;
 }
 
 .date i {
-  background: #181818;
-  color: #d8d8d8;
+  background: var(--crust);
+  color: var(--text);
   margin-right: 4px;
 }
