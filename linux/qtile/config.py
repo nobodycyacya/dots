@@ -5,6 +5,35 @@ from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
 
+catppuccin = {
+    "rosewater": "#f5e0dc",
+    "flamingo": "#f2cdcd",
+    "pink": "#f5c2e7",
+    "mauve": "#cba6f7",
+    "red": "#f38ba8",
+    "maroon": "#eba0ac",
+    "peach": "#fab387",
+    "yellow": "#f9e2af",
+    "green": "#a6e3a1",
+    "teal": "#94e2d5",
+    "sky": "#89dceb",
+    "sapphire": "#74c7ec",
+    "blue": "#89b4fa",
+    "lavender": "#b4befe",
+    "text": "#cdd6f4",
+    "subtext1": "#bac2de",
+    "subtext0": "#a6adc8",
+    "overlay2": "#9399b2",
+    "overlay1": "#7f849c",
+    "overlay0": "#6c7086",
+    "surface2": "#585b70",
+    "surface1": "#45475a",
+    "surface0": "#313244",
+    "base": "#1e1e2e",
+    "mantle": "#181825",
+    "crust": "#11111b",
+}
+
 @hook.subscribe.startup_once
 def autostart():
     commands = [
@@ -81,7 +110,7 @@ layouts = [
     # layout.Stack(num_stacks=2),
     # layout.Bsp(),
     # layout.Matrix(),
-    layout.MonadTall(border_width=4, margin=4, border_focus="#a1b56c", border_normal="#585858"),
+    layout.MonadTall(border_width=4, margin=4, border_focus=catppuccin["green"], border_normal=catppuccin["surface2"]),
     # layout.MonadWide(),
     # layout.RatioTile(),
     # layout.Tile(),
@@ -94,8 +123,8 @@ widget_defaults = dict(
     font="JetBrainsMono Nerd Font Semibold",
     fontsize=15,
     padding=3,
-    background="#181818",
-    foreground="#d8d8d8",
+    background=catppuccin["crust"],
+    foreground=catppuccin["text"],
 )
 extension_defaults = widget_defaults.copy()
 
@@ -105,21 +134,21 @@ screens = [
         wallpaper_mode = "fill",
         bottom=bar.Bar(
             [
-                widget.Prompt(cursor_color="#ab4642", prompt="Run: "),
+                widget.Prompt(cursor_color=catppuccin["red"], prompt="Run: "),
                 widget.CurrentLayoutIcon(scale=0.75),
-                widget.GroupBox(highlight_method="border", active="#ab4642", inactive="#585858", this_current_screen_border="#585858"),
+                widget.GroupBox(highlight_method="border", active=catppuccin["green"], inactive=catppuccin["surface1"], this_current_screen_border=catppuccin["surface1"]),
                 widget.WindowName(),
-                widget.TextBox(text="  ", foreground="#dc9656"),
+                widget.TextBox(text="  ", foreground=catppuccin["red"]),
                 widget.CPU(format="{load_percent:.0f}%"),
-                widget.TextBox(text="  ", foreground="#86c1b9"),
+                widget.TextBox(text="  ", foreground=catppuccin["peach"]),
                 widget.Memory(format="{MemPercent:.0f}%"),
-                widget.TextBox(text=" 󰕾 ", foreground="#d8d8d8"),
+                widget.TextBox(text=" 󰕾 ", foreground=catppuccin["lavender"]),
                 widget.Volume(fmt="{}"),
-                widget.TextBox(text="  ", foreground="#f7ca88"),
+                widget.TextBox(text="  ", foreground=catppuccin["yellow"]),
                 widget.Backlight(format="{percent:2.0%}", backlight_name="intel_backlight"),
-                widget.TextBox(text=" 󱈏 ", foreground="#a1b56c"),
+                widget.TextBox(text=" 󱈏 ", foreground=catppuccin["green"]),
                 widget.Battery(format="{percent:2.0%}"),
-                widget.TextBox(text=" 󰃰 ", foreground="#ba8baf"),
+                widget.TextBox(text=" 󰃰 ", foreground=catppuccin["mauve"]),
                 widget.Clock(format="%Y-%m-%d %H:%M"),
                 widget.Systray(),
             ],
@@ -127,9 +156,6 @@ screens = [
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"]  # Borders are magenta
         ),
-        # You can uncomment this variable if you see that on X11 floating resize/moving is laggy
-        # By default we handle these events delayed to already improve performance, however your system might still be struggling
-        # This variable is set to None (no cap) by default, but you can set it to 60 to indicate that you limit it to 60 events per second
         # x11_drag_polling_rate = 60,
     ),
 ]
@@ -142,44 +168,27 @@ mouse = [
 ]
 
 dgroups_key_binder = None
-dgroups_app_rules = []  # type: list
+dgroups_app_rules = []
 follow_mouse_focus = True
 bring_front_click = False
 floats_kept_above = True
 cursor_warp = False
 floating_layout = layout.Floating(
     float_rules=[
-        # Run the utility of `xprop` to see the wm class and name of an X client.
         *layout.Floating.default_float_rules,
-        Match(wm_class="confirmreset"),  # gitk
-        Match(wm_class="makebranch"),  # gitk
-        Match(wm_class="maketag"),  # gitk
-        Match(wm_class="ssh-askpass"),  # ssh-askpass
-        Match(title="branchdialog"),  # gitk
-        Match(title="pinentry"),  # GPG key password entry
+        Match(wm_class="confirmreset"),
+        Match(wm_class="makebranch"),
+        Match(wm_class="maketag"),
+        Match(wm_class="ssh-askpass"),
+        Match(title="branchdialog"),
+        Match(title="pinentry"),
     ]
 )
 auto_fullscreen = True
 focus_on_window_activation = "smart"
 reconfigure_screens = True
-
-# If things like steam games want to auto-minimize themselves when losing
-# focus, should we respect this or not?
 auto_minimize = True
-
-# When using the Wayland backend, this can be used to configure input devices.
 wl_input_rules = None
-
-# xcursor theme (string or None) and size (integer) for Wayland backend
 wl_xcursor_theme = None
 wl_xcursor_size = 24
-
-# XXX: Gasp! We're lying here. In fact, nobody really uses or cares about this
-# string besides java UI toolkits; you can see several discussions on the
-# mailing lists, GitHub issues, and other WM documentation that suggest setting
-# this string if your java app doesn't work correctly. We may as well just lie
-# and say that we're a working one by default.
-#
-# We choose LG3D to maximize irony: it is a 3D non-reparenting WM written in
-# java that happens to be on java's whitelist.
 wmname = "LG3D"
