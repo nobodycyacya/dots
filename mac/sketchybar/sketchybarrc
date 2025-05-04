@@ -265,7 +265,26 @@ RAM=(
   background.border_color=$SURFACE1
   update_freq=3
   script="
-    RAM_PERCENTAGE=\$(memory_pressure | grep \"System-wide memory free percentage:\" | awk '{print 100-\$5\"\"}')
+    TOTAL_RAM_BYTES=\$(sysctl -n hw.memsize)
+    PAGE_SIZE=\$(sysctl -n vm.pagesize)
+    read FREE_PAGES INACTIVE_PAGES SPECULATIVE_PAGES <<< \$(vm_stat | awk \\
+        '/Pages free/ {free=\$3} \\
+         /Pages inactive/ {inactive=\$3} \\
+         /Pages speculative/ {speculative=\$3} \\
+         END {print free, inactive, speculative}' | tr -d '.')
+    NON_ACTIVE_PAGES=\$((FREE_PAGES + INACTIVE_PAGES + SPECULATIVE_PAGES))
+    NON_ACTIVE_RAM_BYTES=\$((NON_ACTIVE_PAGES * PAGE_SIZE))
+    USED_RAM_BYTES=\$((TOTAL_RAM_BYTES - NON_ACTIVE_RAM_BYTES))
+    if [ \$TOTAL_RAM_BYTES -gt 0 ]; then
+      RAM_PERCENTAGE=\$((USED_RAM_BYTES * 100 / TOTAL_RAM_BYTES))
+      if [ \$RAM_PERCENTAGE -lt 0 ]; then
+        RAM_PERCENTAGE=0
+      elif [ \$RAM_PERCENTAGE -gt 100 ]; then
+        RAM_PERCENTAGE=100
+      fi
+    else
+      RAM_PERCENTAGE=0
+    fi
     case \"\$RAM_PERCENTAGE\" in
       9[0-9]|100)
         ICON=􀐟
