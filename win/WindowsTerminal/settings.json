@@ -1,39 +1,11 @@
 {
     "$help": "https://aka.ms/terminal-documentation",
     "$schema": "https://aka.ms/terminal-profiles-schema",
-    "actions": 
-    [
-        {
-            "command": 
-            {
-                "action": "copy",
-                "singleLine": false
-            },
-            "id": "User.copy.644BA8F2"
-        },
-        {
-            "command": "paste",
-            "id": "User.paste"
-        },
-        {
-            "command": "find",
-            "id": "User.find"
-        },
-        {
-            "command": 
-            {
-                "action": "splitPane",
-                "split": "auto",
-                "splitMode": "duplicate"
-            },
-            "id": "User.splitPane.A6751878"
-        }
-    ],
+    "actions": [],
     "copyFormatting": "none",
     "copyOnSelect": true,
     "defaultProfile": "{96cba0a6-05df-49c9-974a-a718d7b9976f}",
-    "keybindings": 
-    [
+    "keybindings": [
         {
             "id": "User.copy.644BA8F2",
             "keys": "ctrl+shift+c"
@@ -51,17 +23,14 @@
             "keys": "ctrl+shift+f"
         }
     ],
-    "newTabMenu": 
-    [
+    "newTabMenu": [
         {
             "type": "remainingProfiles"
         }
     ],
-    "profiles": 
-    {
+    "profiles": {
         "defaults": {},
-        "list": 
-        [
+        "list": [
             {
                 "commandline": "%SystemRoot%\\System32\\WindowsPowerShell\\v1.0\\powershell.exe",
                 "guid": "{61c54bbd-c2c6-5271-96e7-009a87ff44bf}",
@@ -83,8 +52,7 @@
             {
                 "antialiasingMode": "cleartype",
                 "autoMarkPrompts": false,
-                "bellStyle": 
-                [
+                "bellStyle": [
                     "audible",
                     "window",
                     "taskbar"
@@ -95,11 +63,10 @@
                 "elevate": false,
                 "experimental.retroTerminalEffect": false,
                 "experimental.rightClickContextMenu": true,
-                "font": 
-                {
-                    "cellHeight": "1.618",
+                "font": {
+                    "cellHeight": "1.4",
                     "face": "'JetBrainsMono Nerd Font'",
-                    "size": 9
+                    "size": 9.25
                 },
                 "guid": "{96cba0a6-05df-49c9-974a-a718d7b9976f}",
                 "hidden": false,
@@ -107,14 +74,13 @@
                 "intenseTextStyle": "all",
                 "name": "WindowsTerminal",
                 "opacity": 95,
-                "padding": "12",
+                "padding": "8",
                 "showMarksOnScrollbar": true,
                 "startingDirectory": "%USERPROFILE%",
                 "useAcrylic": false
             },
             {
-                "font": 
-                {
+                "font": {
                     "cellHeight": "1.618",
                     "face": "'JetBrainsMono Nerd Font'",
                     "size": 8
@@ -126,50 +92,45 @@
             },
         ]
     },
-    "schemes": 
-    [
+    "schemes": [
         {
-            "background": "#181818",
-            "black": "#181818",
-            "blue": "#7cafc2",
-            "brightBlack": "#585858",
-            "brightBlue": "#7cafc2",
-            "brightCyan": "#86c1b9",
-            "brightGreen": "#a1b56c",
-            "brightPurple": "#86c1b9",
-            "brightRed": "#ab4642",
-            "brightWhite": "#f8f8f8",
-            "brightYellow": "#f7ca88",
-            "cursorColor": "#ab4642",
-            "cyan": "#86c1b9",
-            "foreground": "#d8d8d8",
-            "green": "#a1b56c",
             "name": "MyTheme",
-            "purple": "#86c1b9",
-            "red": "#ab4642",
-            "selectionBackground": "#585858",
-            "white": "#d8d8d8",
-            "yellow": "#f7ca88"
+            "cursorColor": "#F5E0DC",
+            "selectionBackground": "#313244",
+            "background": "#11111B",
+            "foreground": "#CDD6F4",
+            "black": "#1E1E2E",
+            "red": "#F38BA8",
+            "green": "#A6E3A1",
+            "yellow": "#F9E2AF",
+            "blue": "#89B4FA",
+            "purple": "#F5C2E7",
+            "cyan": "#94E2D5",
+            "white": "#CDD6F4",
+            "brightBlack": "#585B70",
+            "brightRed": "#F38BA8",
+            "brightGreen": "#A6E3A1",
+            "brightYellow": "#F9E2AF",
+            "brightBlue": "#89B4FA",
+            "brightPurple": "#F5C2E7",
+            "brightCyan": "#94E2D5",
+            "brightWhite": "#CDD6F4"
         }
     ],
-    "themes": 
-    [
+    "themes": [
         {
             "name": "MyTheme",
-            "tab": 
-            {
-                "background": "#181818",
+            "tab": {
+                "background": "#1E1E2EFF",
                 "iconStyle": "monochrome",
                 "showCloseButton": "always",
                 "unfocusedBackground": null
             },
-            "tabRow": 
-            {
-                "background": "#181818",
-                "unfocusedBackground": "#181818"
+            "tabRow": {
+                "background": "#181825FF",
+                "unfocusedBackground": "#11111BFF"
             },
-            "window": 
-            {
+            "window": {
                 "applicationTheme": "dark",
                 "experimental.rainbowFrame": true,
                 "frame": "terminalBackground",
