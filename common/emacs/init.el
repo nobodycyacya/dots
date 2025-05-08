@@ -110,15 +110,15 @@
   (initial-scratch-message (concat ";; Happy hacking, " user-login-name " - Emacs ♥ you!\n\n")))
 
 (use-package cus-edit
-	:ensure nil
-	:custom
-	(custom-file (locate-user-emacs-file "custom.el")))
+  :ensure nil
+  :custom
+  (custom-file (locate-user-emacs-file "custom.el")))
 
 (use-package which-key
-	:ensure nil
+  :ensure nil
   :hook
   (after-init . which-key-mode)
-	:config
+  :config
   (setq which-key-show-early-on-C-h t)
   (setq which-key-separator " → " )
   (setq which-key-idle-delay 0.3)
