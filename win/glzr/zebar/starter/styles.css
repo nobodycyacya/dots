@@ -82,8 +82,8 @@ body,
   border: 2px solid var(--crust);
   border-radius: 4px;
   background: var(--crust);
-  color: var(--rosewater);
-  font-size: 13px;
+  color: var(--pink);
+  font-size: 15px;
   margin-left: 4px;
   margin-right: 4px;
   padding: 4px;
@@ -103,14 +103,13 @@ body,
   font-weight: 600;
   font-size: 13px;
   padding: 4px 8px;
-  margin: 2px;
+  margin: 0px;
 
   &.displayed {
     border: 2px solid var(--crust);
     border-radius: 4px;
     background: var(--crust);
     color: var(--text);
-    padding: 4px 8px;
   }
 
   &.focused {
@@ -118,8 +117,6 @@ body,
     border-radius: 4px;
     background: var(--green);
     color: var(--base);
-    font-weight: 800;
-    padding: 4px 8px;
   }
 }
 
@@ -127,7 +124,7 @@ body,
   background: var(--crust);
   color: var(--text);
   font-weight: 600;
-  font-size: 12px;
+  font-size: 13px;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
