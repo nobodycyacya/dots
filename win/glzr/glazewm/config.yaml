@@ -1,11 +1,11 @@
 general:
   startup_commands: [
-    # 'shell-exec zebar'
-    'shell-exec yasb'
+    'shell-exec zebar'
+    # 'shell-exec yasb'
   ]
   shutdown_commands: [
-    # 'shell-exec taskkill /IM zebar.exe /F'
-    'shell-exec taskkill /IM yasb.exe /F'
+    'shell-exec taskkill /IM zebar.exe /F'
+    # 'shell-exec taskkill /IM yasb.exe /F'
   ]
   config_reload_commands: []
   focus_follows_cursor: false
@@ -20,7 +20,7 @@ gaps:
   scale_with_dpi: true
   inner_gap: '4px'
   outer_gap:
-    top: '4px'
+    top: '36px' # YASB use 4px
     right: '4px'
     bottom: '4px'
     left: '4px'
