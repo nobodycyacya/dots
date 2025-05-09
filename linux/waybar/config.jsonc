@@ -23,6 +23,7 @@
         "tray"
     ],
     "custom/hyprland-logo": {
+        "on-click": "rofi -show run",
         "format": "    "
     },
     "hyprland/workspaces": {
