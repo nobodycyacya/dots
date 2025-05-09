@@ -130,13 +130,14 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper = "/home/cya/wallpaper/wp1.jpg",
+        wallpaper = "/home/cya/wallpaper/wp1.png",
         wallpaper_mode = "fill",
         bottom=bar.Bar(
             [
+                widget.TextBox('  ', foreground=catppuccin["rosewater"]),
                 widget.Prompt(cursor_color=catppuccin["red"], prompt="Run: "),
+                widget.GroupBox(highlight_method="border", active=catppuccin["text"], inactive=catppuccin["surface1"], this_current_screen_border=catppuccin["green"], hide_unused=True),
                 widget.CurrentLayoutIcon(scale=0.75),
-                widget.GroupBox(highlight_method="border", active=catppuccin["green"], inactive=catppuccin["surface1"], this_current_screen_border=catppuccin["surface1"]),
                 widget.WindowName(),
                 widget.TextBox(text="  ", foreground=catppuccin["red"]),
                 widget.CPU(format="{load_percent:.0f}%"),
