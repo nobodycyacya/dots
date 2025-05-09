@@ -26,7 +26,7 @@ elseif wezterm.target_triple == "x86_64-unknown-linux-gnu" then
   config.default_prog = { "bash", "-l" }
   config.window_background_opacity = 0.80
 end
-config.color_scheme = "Default Dark (base16)"
+config.color_scheme = "Catppuccin Mocha"
 config.line_height = 1.00
 config.default_cursor_style = "BlinkingBlock"
 config.animation_fps = 1
