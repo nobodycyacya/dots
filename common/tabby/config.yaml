@@ -113,33 +113,29 @@ hotkeys:
 terminal:
   searchOptions: {}
   colorScheme:
-    name: Base16 Default Dark
-    foreground: '#d8d8d8'
-    background: '#181818'
-    cursor: '#d8d8d8'
+    name: Catppuccin Mocha
+    foreground: '#cdd6f4'
+    background: '#11111b'
+    selection: null
+    cursor: '#f5e0dc'
+    cursorAccent: null
     colors:
-      - '#181818'
-      - '#ab4642'
-      - '#a1b56c'
-      - '#f7ca88'
-      - '#7cafc2'
-      - '#ba8baf'
-      - '#86c1b9'
-      - '#d8d8d8'
-      - '#585858'
-      - '#ab4642'
-      - '#a1b56c'
-      - '#f7ca88'
-      - '#7cafc2'
-      - '#ba8baf'
-      - '#86c1b9'
-      - '#f8f8f8'
-      - '#dc9656'
-      - '#a16946'
-      - '#282828'
-      - '#383838'
-      - '#b8b8b8'
-      - '#e8e8e8'
+      - '#45475a'
+      - '#f38ba8'
+      - '#a6e3a1'
+      - '#f9e2af'
+      - '#89b4fa'
+      - '#f5c2e7'
+      - '#94e2d5'
+      - '#bac2de'
+      - '#585b70'
+      - '#f38ba8'
+      - '#a6e3a1'
+      - '#f9e2af'
+      - '#89b4fa'
+      - '#f5c2e7'
+      - '#94e2d5'
+      - '#a6adc8'
   minimumContrastRatio: 0
   font: JetBrainsMono Nerd Font
   ligatures: true
@@ -150,42 +146,45 @@ terminal:
   copyOnSelect: true
   bell: visual
   customColorSchemes: []
-  fontSize: 12
+  fontSize: 14
   linePadding: 1.618
   profile: local:powershell
   scrollbackLines: 5000
   lightColorScheme:
-    name: Solarized Light
-    foreground: '#536870'
-    background: '#fcf4dc'
-    cursor: '#536870'
+    name: Catppuccin Latte
+    foreground: '#4c4f69'
+    background: '#eff1f5'
+    selection: null
+    cursor: '#dc8a78'
+    cursorAccent: null
     colors:
-      - '#002831'
-      - '#d11c24'
-      - '#738a05'
-      - '#a57706'
-      - '#2176c7'
-      - '#c61c6f'
-      - '#259286'
-      - '#eae3cb'
-      - '#001e27'
-      - '#bd3613'
-      - '#475b62'
-      - '#536870'
-      - '#708284'
-      - '#5956ba'
-      - '#819090'
-      - '#fcf4dc'
+      - '#5c5f77'
+      - '#d20f39'
+      - '#40a02b'
+      - '#df8e1d'
+      - '#1e66f5'
+      - '#ea76cb'
+      - '#179299'
+      - '#acb0be'
+      - '#6c6f85'
+      - '#d20f39'
+      - '#40a02b'
+      - '#df8e1d'
+      - '#1e66f5'
+      - '#ea76cb'
+      - '#179299'
+      - '#bcc0cc'
   showTabProfileIcon: true
   paneResizeStep: 0.15
 ssh: {}
 clickableLinks: {}
 accessibility: {}
 appearance:
-  opacity: 0.88
+  opacity: 0.95
   tabsInFullscreen: true
   flexTabs: true
   lastTabClosesWindow: true
+  colorSchemeMode: auto
 hacks:
   enableFluentBackground: true
 providerBlacklist: []
