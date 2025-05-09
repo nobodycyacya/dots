@@ -149,6 +149,10 @@
   :config
   (setq display-line-numbers-width-start t))
 
+(use-package icomplete
+  :ensure nil
+  :hook (after-init . fido-vertical-mode))
+
 (use-package frame
   :ensure nil
   :hook
