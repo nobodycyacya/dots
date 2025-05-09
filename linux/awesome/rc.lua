@@ -230,32 +230,32 @@ awful.screen.connect_for_each_screen(function(s)
       spacing = xresources.apply_dpi(16),
       wibox.widget({
         awful.widget.watch([[sh -c "echo  $(top -bn1 | grep Cpu | awk '{print sprintf(\"\%.0f\", $2)}')%"]], 3),
-        fg = "#eeeeee",
+        fg = catppuccin["red"],
         widget = wibox.container.background,
       }),
       wibox.widget({
         awful.widget.watch([[sh -c "echo  $(free | grep Mem | awk '{printf \"%.0f\", ($3/$2)*100}')%"]], 3),
-        fg = "#eeeeee",
+        fg = catppuccin["peach"],
         widget = wibox.container.background,
       }),
       wibox.widget({
         awful.widget.watch([[sh -c "echo 󰁹 $(cat /sys/class/power_supply/BAT1/capacity)%"]], 120),
-        fg = "#eeeeee",
+        fg = catppuccin["green"],
         widget = wibox.container.background,
       }),
       wibox.widget({
         awful.widget.watch([[sh -c "echo  $(echo $(amixer sget Master | grep -o -E '[0-9]+%' | head -1))"]], 1),
-        fg = "#eeeeee",
+        fg = catppuccin["text"],
         widget = wibox.container.background,
       }),
       wibox.widget({
         awful.widget.watch([[sh -c "echo  $(($(brightnessctl get) * 100 / $(brightnessctl max)))%"]], 1),
-        fg = "#eeeeee",
+        fg = catppuccin["yellow"],
         widget = wibox.container.background,
       }),
       wibox.widget({
         awful.widget.watch([[sh -c "echo  $(date +%Y-%m-%d\ %H:%M)"]], 60),
-        fg = "#eeeeee",
+        fg = catppuccin["lavender"],
         widget = wibox.container.background,
       }),
       wibox.widget.systray(),
