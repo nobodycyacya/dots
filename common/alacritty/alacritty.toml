@@ -43,62 +43,62 @@ transparent_background_colors = false
 draw_bold_text_with_bright_colors = false
 
 [colors.selection]
-text = "CellBackground"
-background = "CellForeground"
+text = "#1e1e2e"
+background = "#f5e0dc"
 
 [colors.footer_bar]
-foreground = "#181818"
-background = "#d8d8d8"
+foreground = "#1e1e2e"
+background = "#a6adc8"
 
 [colors.cursor]
-text = "CellBackground"
-cursor = "CellForeground"
+text = "#1e1e2e"
+cursor = "#f5e0dc"
 
 [colors.vi_mode_cursor]
-text = "CellBackground"
-cursor = "CellForeground"
+text = "#1e1e2e"
+cursor = "#b4befe"
 
 [colors.primary]
-background = "#181818"
-foreground = "#d8d8d8"
-dim_foreground = "#828482"
-bright_foreground = "None"
+background = "#11111b"
+foreground = "#cdd6f4"
+dim_foreground = "#7f849c"
+bright_foreground = "#cdd6f4"
 
 [colors.search.matches]
-foreground = "#181818"
-background = "#ac4242"
+foreground = "#1e1e2e"
+background = "#a6adc8"
 
 [colors.search.focused_match]
-foreground = "#181818"
-background = "#f4bf75"
+foreground = "#1e1e2e"
+background = "#a6e3a1"
 
 [colors.hints.start]
-foreground = "#181818"
-background = "#f4bf75"
+foreground = "#1e1e2e"
+background = "#f9e2af"
 
 [colors.hints.end]
-foreground = "#181818"
-background = "#ac4242"
+foreground = "#1e1e2e"
+background = "#a6adc8"
 
 [colors.normal]
-black = "#181818"
-red = "#ac4242"
-green = "#90a959"
-yellow = "#f4bf75"
-blue = "#6a9fb5"
-magenta = "#aa759f"
-cyan = "#75b5aa"
-white = "#d8d8d8"
+black = "#45475a"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#bac2de"
 
 [colors.bright]
-black = "#6b6b6b"
-red = "#c55555"
-green = "#aac474"
-yellow = "#feca88"
-blue = "#82b8c8"
-magenta = "#c28cb8"
-cyan = "#93d3c3"
-white = "#f8f8f8"
+black = "#585b70"
+red = "#f38ba8"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+blue = "#89b4fa"
+magenta = "#f5c2e7"
+cyan = "#94e2d5"
+white = "#a6adc8"
 
 [colors.dim]
 black = "#0f0f0f"
@@ -112,11 +112,11 @@ white = "#8e8e8e"
 
 [[colors.indexed_colors]]
 index = 16
-color = "#f8f8f8"
+color = "#fab387"
 
 [[colors.indexed_colors]]
 index = 17
-color = "#d8d8d8"
+color = "#f5e0dc"
 
 [bell]
 animation = "Linear"
