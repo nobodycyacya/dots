@@ -1,32 +1,30 @@
 /* General */
-:root {
-  --rosewater: #f5e0dc;
-  --flamingo: #f2cdcd;
-  --pink: #f5c2e7;
-  --mauve: #cba6f7;
-  --red: #f38ba8;
-  --maroon: #eba0ac;
-  --peach: #fab387;
-  --yellow: #f9e2af;
-  --green: #a6e3a1;
-  --teal: #94e2d5;
-  --sky: #89dceb;
-  --sapphire: #74c7ec;
-  --blue: #89b4fa;
-  --lavender: #b4befe;
-  --text: #cdd6f4;
-  --subtext1: #bac2de;
-  --subtext0: #a6adc8;
-  --overlay2: #9399b2;
-  --overlay1: #7f849c;
-  --overlay0: #6c7086;
-  --surface2: #585b70;
-  --surface1: #45475a;
-  --surface0: #282936;
-  --base: #1e1e2e;
-  --mantle: #181825;
-  --crust: #11111b;
-}
+@define-color rosewater #f5e0dc;
+@define-color flamingo #f2cdcd;
+@define-color pink #f5c2e7;
+@define-color mauve #cba6f7;
+@define-color red #f38ba8;
+@define-color maroon #eba0ac;
+@define-color peach #fab387;
+@define-color yellow #f9e2af;
+@define-color green #a6e3a1;
+@define-color teal #94e2d5;
+@define-color sky #89dceb;
+@define-color sapphire #74c7ec;
+@define-color blue #89b4fa;
+@define-color lavender #b4befe;
+@define-color white-text #cdd6f4;
+@define-color subtext1 #bac2de;
+@define-color subtext0 #a6adc8;
+@define-color overlay2 #9399b2;
+@define-color overlay1 #7f849c;
+@define-color overlay0 #6c7086;
+@define-color surface2 #585b70;
+@define-color surface1 #45475a;
+@define-color surface0 #282936;
+@define-color black-base #1e1e2e;
+@define-color mantle #181825;
+@define-color crust #11111b;
 
 * {
   font-family: "RobotoMono Nerd Font";
@@ -37,8 +35,8 @@
 }
 
 window#waybar {
-  background-color: var(--crust);
-  color: var(--text);
+  background-color: @crust;
+  color: @white-text;
   padding: 0;
 }
 
@@ -47,36 +45,36 @@ window#waybar {
 #workspaces,
 #window,
 #custom-arch {
-  background: var(--crust);
-  color: var(--pink);
+  background: @crust;
+  color: @pink;
 }
 
 #workspaces button {
-  background-color: var(--crust);
-  color: var(--text);
+  background-color: @crust;
+  color: @white-text;
 }
 
 #workspaces button:hover {
-  color: var(--lavender);
-  background-color: var(--crust);
+  color: @lavender;
+  background-color: @crust;
 }
 
 #workspaces button.active {
-  background: var(--green);
-  border: 2px solid var(--crust);
+  background: @green;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--base);
+  color: @black-base;
   margin-left: 2px;
   margin-right: 2px;
 }
 
 #workspaces button.urgent {
-  background-color: var(--crust);
-  color: var(--red);
+  background-color: @crust;
+  color: @red;
 }
 
 #window {
-  color: var(--text);
+  color: @white-text;
   font-size: 16px;
   margin-left: 8px;
   margin-right: 8px;
@@ -92,145 +90,145 @@ window#waybar {
 #tray,
 
 #cpu {
-  background: var(--crust);
-  border: 2px solid var(--crsut);
+  background: @crust;
+  border: 2px solid @crsut;
   border-radius: 8px;
-  color: var(--text);
+  color: @white-text;
   padding: 4px 8px;
 }
 
 #cpu.idle {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--green);
+  color: @green;
   padding: 4px 8px;
 }
 
 #cpu.normal {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--green);
+  color: @green;
   padding: 4px 8px;
 }
 
 #cpu.warning {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--peach);
+  color: @peach;
   padding: 4px 8px;
 }
 
 #cpu.critical {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--red);
+  color: @red;
   padding: 4px 8px;
 }
 
 #memory {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--text);
+  color: @white-text;
   padding: 4px 8px;
 }
 
 #memory.idle {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--green);
+  color: @green;
   padding: 4px 8px;
 }
 
 #memory.normal {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--green);
+  color: @green;
   padding: 4px 8px;
 }
 
 #memory.warning {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--peach);
+  color: @peach;
   padding: 4px 8px;
 }
 
 #memory.critical {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--red);
+  color: @red;
   padding: 4px 8px;
 }
 
 #backlight {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--yellow);
+  color: @yellow;
   padding: 4px 8px;
 }
 
 #pulseaudio {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--teal);
+  color: @teal;
   padding: 4px 8px;
 }
 
 #battery {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--green);
+  color: @green;
   padding: 4px 8px;
 }
 
 #battery.charging {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--sapphire);
+  color: @sapphire;
   padding: 4px 8px;
 }
 
 #battery.warning {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--peach);
+  color: @peach;
   padding: 4px 8px;
 }
 
 #battery.critical {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--red);
+  color: @red;
   padding: 4px 8px;
 }
 
 #clock {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--mauve);
+  color: @mauve;
   padding: 4px 8px;
 }
 
 #tray {
-  background: var(--crust);
-  border: 2px solid var(--crust);
+  background: @crust;
+  border: 2px solid @crust;
   border-radius: 8px;
-  color: var(--text);
+  color: @white-text;
   padding: 4px 8px;
 }

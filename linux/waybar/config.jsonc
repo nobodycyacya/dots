@@ -8,7 +8,7 @@
     "passthrough": false,
     "fixed-center": true,
     "modules-left": [
-        "custom/arch",
+        "custom/hyprland-logo",
         "hyprland/workspaces",
         "hyprland/window"
     ],
@@ -22,8 +22,8 @@
         "clock",
         "tray"
     ],
-    "custom/arch": {
-        "format": "  󰣇  "
+    "custom/hyprland-logo": {
+        "format": "    "
     },
     "hyprland/workspaces": {
         "on-click": "activate",
