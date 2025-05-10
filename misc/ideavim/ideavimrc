@@ -1,0 +1,38 @@
+" Option
+set history=5000
+set number
+set relativenumber
+set showmode
+set showcmd
+set smartcase
+set hlsearch
+set ignorecase
+set incsearch
+set visualbell
+set timeout
+set timeoutlen=2400
+set clipboard^=unnamed,unnamedplus
+set colorcolumn=80
+set cursorline
+
+" Options only for idea
+set ideajoin
+set ideamarks
+set idearefactormode=normal
+set ideastatusicon=enable
+
+" Keybinding
+let mapleader="\<space>"
+let maplocalleader="\\"
+inoremap jk <esc>
+cnoremap jk <c-c>
+vnoremap jk <esc>
+
+" Plugin setting
+set highlightedyank
+let g:highlightedyank_highlight_duration="2400"
+set which-key
+set commentary
+set nerdtree
+nnoremap <leader>tn :NERDTreeToggle<CR>
+set matchit

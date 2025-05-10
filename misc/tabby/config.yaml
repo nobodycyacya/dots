@@ -1,0 +1,199 @@
+version: 7
+profiles: []
+groups: []
+configSync:
+  parts: {}
+hotkeys:
+  toggle-window: []
+  copy-current-path: []
+  ctrl-c:
+    - Ctrl-C
+  paste:
+    - Ctrl-Shift-V
+  select-all:
+    - Ctrl-A
+  zoom-in: []
+  zoom-out: []
+  reset-zoom: []
+  previous-word: []
+  next-word: []
+  delete-previous-word: []
+  delete-line: []
+  delete-next-word: []
+  search: []
+  pane-focus-all: []
+  focus-all-tabs: []
+  scroll-to-top: []
+  scroll-up: []
+  scroll-down: []
+  scroll-to-bottom: []
+  restart-telnet-session: []
+  restart-ssh-session: []
+  launch-winscp: []
+  settings-tab: {}
+  settings: []
+  serial: []
+  restart-serial-session: []
+  new-tab: []
+  new-window: []
+  profile: {}
+  profile-selectors: {}
+  toggle-fullscreen: []
+  close-tab: []
+  reopen-tab: []
+  toggle-last-tab: []
+  rename-tab: []
+  next-tab: []
+  previous-tab: []
+  move-tab-left: []
+  move-tab-right: []
+  rearrange-panes: []
+  tab-1: []
+  tab-2: []
+  tab-3: []
+  tab-4: []
+  tab-5: []
+  tab-6: []
+  tab-7: []
+  tab-8: []
+  tab-9: []
+  tab-10: []
+  duplicate-tab: []
+  restart-tab: []
+  reconnect-tab: []
+  disconnect-tab: []
+  explode-tab: []
+  combine-tabs: []
+  tab-11: []
+  tab-12: []
+  tab-13: []
+  tab-14: []
+  tab-15: []
+  tab-16: []
+  tab-17: []
+  tab-18: []
+  tab-19: []
+  tab-20: []
+  split-right: []
+  split-bottom: []
+  split-left: []
+  split-top: []
+  pane-nav-right: []
+  pane-nav-down: []
+  pane-nav-up: []
+  pane-nav-left: []
+  pane-nav-previous: []
+  pane-nav-next: []
+  pane-nav-1: []
+  pane-nav-2: []
+  pane-nav-3: []
+  pane-nav-4: []
+  pane-nav-5: []
+  pane-nav-6: []
+  pane-nav-7: []
+  pane-nav-8: []
+  pane-nav-9: []
+  pane-maximize: []
+  pane-increase-vertical: []
+  pane-decrease-vertical: []
+  pane-increase-horizontal: []
+  pane-decrease-horizontal: []
+  profile-selector: []
+  switch-profile: []
+  command-selector: []
+  scroll-page-up: []
+  scroll-page-down: []
+  group-selectors: {}
+  close-pane: []
+  copy:
+    - Ctrl-Shift-C
+  home: []
+  end: []
+  clear: []
+terminal:
+  searchOptions: {}
+  colorScheme:
+    name: Catppuccin Mocha
+    foreground: '#cdd6f4'
+    background: '#11111b'
+    selection: null
+    cursor: '#f5e0dc'
+    cursorAccent: null
+    colors:
+      - '#45475a'
+      - '#f38ba8'
+      - '#a6e3a1'
+      - '#f9e2af'
+      - '#89b4fa'
+      - '#f5c2e7'
+      - '#94e2d5'
+      - '#bac2de'
+      - '#585b70'
+      - '#f38ba8'
+      - '#a6e3a1'
+      - '#f9e2af'
+      - '#89b4fa'
+      - '#f5c2e7'
+      - '#94e2d5'
+      - '#a6adc8'
+  minimumContrastRatio: 0
+  font: JetBrainsMono Nerd Font
+  ligatures: true
+  fontWeight: 600
+  fontWeightBold: 900
+  fallbackFont: Monaco
+  altIsMeta: true
+  copyOnSelect: true
+  bell: visual
+  customColorSchemes: []
+  fontSize: 14
+  linePadding: 1.618
+  profile: local:powershell
+  scrollbackLines: 5000
+  lightColorScheme:
+    name: Catppuccin Latte
+    foreground: '#4c4f69'
+    background: '#eff1f5'
+    selection: null
+    cursor: '#dc8a78'
+    cursorAccent: null
+    colors:
+      - '#5c5f77'
+      - '#d20f39'
+      - '#40a02b'
+      - '#df8e1d'
+      - '#1e66f5'
+      - '#ea76cb'
+      - '#179299'
+      - '#acb0be'
+      - '#6c6f85'
+      - '#d20f39'
+      - '#40a02b'
+      - '#df8e1d'
+      - '#1e66f5'
+      - '#ea76cb'
+      - '#179299'
+      - '#bcc0cc'
+  showTabProfileIcon: true
+  paneResizeStep: 0.15
+ssh: {}
+clickableLinks: {}
+accessibility: {}
+appearance:
+  opacity: 0.95
+  tabsInFullscreen: true
+  flexTabs: true
+  lastTabClosesWindow: true
+  colorSchemeMode: auto
+hacks:
+  enableFluentBackground: true
+providerBlacklist: []
+commandBlacklist: []
+language: en-US
+enableWelcomeTab: false
+pluginBlacklist: []
+profileDefaults:
+  ssh:
+    disableDynamicTitle: true
+profileBlacklist: []
+enableAnalytics: false

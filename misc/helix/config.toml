@@ -1,0 +1,58 @@
+theme = "catppuccin_mocha"
+
+[editor]
+true-color = true
+line-number = "relative"
+mouse = false
+cursorline = true
+cursorcolumn = true
+text-width = 80
+rulers = [80]
+color-modes = true
+bufferline = "always"
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.file-picker]
+hidden = false
+
+[editor.statusline]
+left = ["mode", "file-name", "spinner"]
+center = []
+right = ["diagnostics", "selections", "position", "file-encoding", "file-line-ending", "file-type"]
+separator = "slanted"
+mode.normal = "NORMAL"
+mode.insert = "INSERT"
+mode.select = "SELECT"
+
+[editor.auto-pairs]
+'(' = ')'
+'{' = '}'
+'[' = ']'
+'"' = '"'
+'`' = '`'
+"'" = "'"
+
+[editor.search]
+smart-case = true
+wrap-around = true
+
+[editor.whitespace]
+render = "all"
+
+[editor.whitespace.characters]
+space = "·"
+nbsp = " "
+tab = " "
+newline = " "
+tabpad = " "
+
+[editor.indent-guides]
+render = true
+character = "│"
+skip-levels = 0
+
+[keys.insert]
+j = { k = "normal_mode" }
