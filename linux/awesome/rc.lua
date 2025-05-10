@@ -39,7 +39,7 @@ do
   end
 
 -- Theme
-local  catppuccin = {
+local catppuccin = {
   rosewater = "#f5e0dc",
   flamingo = "#f2cdcd",
   pink = "#f5c2e7",
