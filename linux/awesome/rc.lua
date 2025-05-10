@@ -38,7 +38,7 @@ do
     end)
   end
 
-  -- Theme
+-- Theme
 local  catppuccin = {
   rosewater = "#f5e0dc",
   flamingo = "#f2cdcd",
