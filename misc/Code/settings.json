@@ -1,23 +1,15 @@
 {
     // Built-in //
-    "accessibility.dimUnfocused.enabled": true,
-    "accessibility.dimUnfocused.opacity": 0.85,
-    "editor.cursorBlinking": "phase",
-    "editor.cursorSmoothCaretAnimation": "on",
-    "editor.defaultColorDecorators": "always",
     "editor.fontFamily": "'JetBrainsMono Nerd Font', Monaco, Consolas",
-    "editor.fontSize": 13,
+    "editor.fontSize": 15,
     "editor.fontLigatures": true,
-    "editor.fontWeight": "600",
     "editor.guides.bracketPairs": true,
     "editor.guides.highlightActiveIndentation": true,
-    "editor.letterSpacing": 0.2,
-    "editor.lineNumbers": "relative",
-    "editor.lineHeight": 1.618,
-    "editor.renderWhitespace": "all",
     "editor.minimap.enabled": false,
     "editor.tabSize": 2,
-    "editor.smoothScrolling": true,
+    "editor.rulers": [
+        80
+    ],
     "editor.tokenColorCustomizations": {
         "textMateRules": [
             {
@@ -33,16 +25,11 @@
             }
         ]
     },
-    "explorer.sortOrder": "type",
     "extensions.experimental.affinity": {
         "vscodevim.vim": 1,
     },
-    "files.autoSave": "afterDelay",
-    "files.autoSaveDelay": 2500,
-    "window.zoomLevel": -0.5,
+    "window.zoomLevel": -0.75,
     "workbench.startupEditor": "none",
-    "workbench.settings.editor": "json",
-    "workbench.list.smoothScrolling": true,
     "workbench.colorCustomizations": {
         "statusBar.background": "#11111b",
         "statusBar.noFolderBackground": "#11111b",
@@ -51,24 +38,7 @@
         "statusBar.debuggingForeground": "#a6e3a1"
     },
     "workbench.colorTheme": "Catppuccin Mocha",
-    "workbench.iconTheme": "catppuccin-mocha",
     "workbench.activityBar.location": "default",
-    "terminal.integrated.smoothScrolling": true,
-    "terminal.integrated.cursorBlinking": true,
-    "terminal.integrated.fontFamily": "'JetBrainsMono Nerd Font', Monaco, Consolas",
-    "terminal.integrated.fontSize": 12,
-    "terminal.integrated.fontLigatures.enabled": true,
-    "terminal.integrated.fontWeight": "600",
-    "terminal.integrated.enableVisualBell": true,
-    "[python]": {
-        "editor.tabSize": 4
-    },
-    "[json]": {
-        "editor.tabSize": 4
-    },
-    "[jsonc]": {
-        "editor.tabSize": 4
-    },
     // VSCodeVim //
     "vim.changeWordIncludesWhitespace": false,
     "vim.cursorStylePerMode.normal": "block",
@@ -208,9 +178,14 @@
     "catppuccin.italicKeywords": true,
     "catppuccin.italicComments": true,
     "catppuccin.boldKeywords": true,
-    "catppuccin.workbenchMode": "default",
+    "catppuccin.workbenchMode": "minimal",
     "catppuccin.bracketMode": "rainbow",
-    "catppuccin.colorOverrides": {},
+    "catppuccin.colorOverrides": {
+        "mocha": {
+            "mantle": "#11111b",
+            "base": "#11111b",
+        }
+    },
     "catppuccin.customUIColors": {
         "all": {
             "editorCursor.background": "rosewater",
@@ -226,4 +201,5 @@
     "catppuccin-icons.associations.extensions": {},
     "catppuccin-icons.associations.files": {},
     "catppuccin-icons.associations.folders": {},
+    "workbench.iconTheme": "catppuccin-mocha",
 }
