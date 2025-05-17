@@ -91,8 +91,8 @@
   :ensure nil
   :when (eq system-type 'darwin)
   :config
-  (setq mac-option-modifier 'meta)
-  (setq mac-command-modifier 'super))
+  (setq mac-option-modifier 'super)
+  (setq mac-command-modifier 'meta))
 
 (use-package modus-themes
   :ensure nil
@@ -155,7 +155,9 @@
 
 (use-package icomplete
   :ensure nil
-  :hook (after-init . fido-vertical-mode))
+  :hook (after-init . fido-mode)
+  :config
+  (setq completions-detailed t))
 
 (use-package frame
   :ensure nil
