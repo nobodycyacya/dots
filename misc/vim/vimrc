@@ -163,7 +163,6 @@ autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | 
 
 " PLUGIN:
 call plug#begin()
-Plug 'machakann/vim-highlightedyank', { 'on': [] }
 Plug 'LunarWatcher/auto-pairs', { 'on': [] }
 Plug 'tpope/vim-commentary', { 'on': [] }
 Plug 'prabirshrestha/asyncomplete.vim', { 'on': [] }
@@ -179,13 +178,6 @@ Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Colors', 'Lines', 'BLines', 'History', 'Commands', 'Rg'] }
 call plug#end()
-
-augroup editor_vim_highlightedyank
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-highlightedyank')
-        \| autocmd! editor_vim_highlightedyank
-        \| let g:highlightedyank_highlight_duration = 1000
-augroup END
 
 augroup editor_auto_pairs
   autocmd!
