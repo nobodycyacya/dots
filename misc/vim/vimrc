@@ -179,25 +179,25 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Colors', 'Lines', 'BLines', 'History', 'Commands', 'Rg'] }
 call plug#end()
 
-augroup editor_auto_pairs
+augroup AutoPairs
   autocmd!
   autocmd InsertEnter * call plug#load('auto-pairs')
-        \| autocmd! editor_auto_pairs
+        \| autocmd! AutoPairs
         \| call autopairs#AutoPairsTryInit()
 augroup END
 
-augroup tool_vim_commentary
+augroup VimCommentary
   autocmd!
   autocmd BufReadPost * call plug#load('vim-commentary')
-        \| autocmd! tool_vim_commentary
+        \| autocmd! VimCommentary
 augroup END
 
-augroup completion_lsp_snippet
+augroup CompletionLspSnippet
   autocmd!
   autocmd InsertEnter * call plug#load('asyncomplete.vim', 'asyncomplete-buffer.vim',
         \ 'asyncomplete-file.vim', 'asyncomplete-lsp.vim', 'vim-lsp', 'vim-vsnip',
         \ 'vim-vsnip-integ')
-        \| autocmd! completion_lsp_snippet
+        \| autocmd! CompletionLspSnippet
         \| let g:lsp_diagnostics_enabled = 0
         \| call asyncomplete#enable_for_buffer()
         \| imap <expr><Tab> vsnip#available(1) ? '<Plug>(vsnip-expand-or-jump)' : pumvisible() ? "\<C-n>" : "\<Tab>"
@@ -257,8 +257,8 @@ function! s:on_lsp_buffer_enabled() abort
   nmap <buffer>[g <Plug>(lsp-previous-diagnostic)
   nmap <buffer>]g <Plug>(lsp-next-diagnostic)
   nmap <buffer>K <Plug>(lsp-hover)
-  nnoremap <buffer><expr><c-f> lsp#scroll(+4)
-  nnoremap <buffer><expr><c-d> lsp#scroll(-4)
+  nnoremap <buffer><expr><C-f> lsp#scroll(+4)
+  nnoremap <buffer><expr><C-d> lsp#scroll(-4)
   let g:lsp_format_sync_timeout = 1000
   autocmd! BufWritePre *.rs,*.go call execute('LspDocumentFormatSync')
 endfunction
