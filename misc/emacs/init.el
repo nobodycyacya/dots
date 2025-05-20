@@ -2,7 +2,7 @@
 
 ;;; Commentary:
 ;;
-;; Emacs - A Self-Defined, Fast and Fancy Emacs Configuration.
+;; Emacs - A Self-Defined, Fast and Simple Emacs Configuration.
 ;;
 
 ;;; References:
