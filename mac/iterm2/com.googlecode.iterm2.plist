@@ -2,16 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>AppleAntiAliasingThreshold</key>
-	<integer>1</integer>
-	<key>ApplePressAndHoldEnabled</key>
-	<false/>
-	<key>AppleScrollAnimationEnabled</key>
-	<integer>0</integer>
-	<key>AppleSmoothFixedFontsSizeThreshold</key>
-	<integer>1</integer>
-	<key>AppleWindowTabbingMode</key>
-	<string>manual</string>
 	<key>Default Bookmark Guid</key>
 	<string>2E9AADD3-269F-469B-9AE5-58E671B30B57</string>
 	<key>DimBackgroundWindows</key>
@@ -985,7 +975,7 @@
 			<key>Guid</key>
 			<string>2E9AADD3-269F-469B-9AE5-58E671B30B57</string>
 			<key>Horizontal Spacing</key>
-			<real>1.04</real>
+			<real>1</real>
 			<key>Icon</key>
 			<integer>1</integer>
 			<key>Idle Code</key>
