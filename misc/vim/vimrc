@@ -1,4 +1,4 @@
-" Reference
+" REFERENCE:
 " https://github.com/junegunn/vim-plug/wiki/tips
 " https://github.com/skywind3000/vim-init
 " https://github.com/wklken/k-vim
@@ -6,7 +6,7 @@
 " https://gitee.com/mirrorvim/vim-fast/blob/master/vimrc-no-plug
 " https://github.com/chenxuan520/vim-fast
 
-" GUI
+" GUI:
 if has('gui-running')
   if has("unix")
     set guifont=JetBrainsMono\ Nerd\ Font:h12
@@ -21,7 +21,7 @@ if has('gui-running')
   set listchars=tab:▸\ ,space:·
 endif
 
-" Options
+" OPTIONS:
 filetype on
 filetype plugin on
 filetype indent on
@@ -37,6 +37,7 @@ set cursorcolumn
 set colorcolumn=80
 set splitbelow
 set splitright
+set showmode
 set mouse=
 set clipboard^=unnamed,unnamedplus
 set nowrap
@@ -65,7 +66,7 @@ set ttimeoutlen=300
 set pumheight=15
 set pumwidth=20
 
-" Disable load built-in plugins
+" BUILTIN:
 let g:loaded_2html_plugin = 1
 let g:loaded_getscript = 1
 let g:loaded_gzip = 1
@@ -88,7 +89,7 @@ let g:loaded_vimballPlugin = 1
 let g:loaded_zip = 1
 let g:loaded_zipPlugin = 1
 
-" Keybindings
+" KEYBINDINGS:
 let mapleader = ' '
 let maplocalleader = ','
 nnoremap <leader>CR :source $VIMRC<cr>
@@ -107,7 +108,7 @@ nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-l> <C-w>l
 
-" Auto-Command
+" AUTOCOMMAND:
 augroup restore_cursor_position
   autocmd!
   autocmd BufReadPost * if line("'\"") > 1 && line("'\"") <= line('$') | exe "normal! g'\"" | endif
@@ -148,7 +149,7 @@ augroup performance_optimize
   autocmd FileType * syntax sync minlines=200
 augroup END
 
-" Automatically install vim-plug
+" BOOTSTRAP:
 let data_dir = has('win32') || has('win64') ? '$HOME/vimfiles' : '~/.vim'
 if empty(glob(data_dir.'/autoload/plug.vim'))
   if has('win32') || has('win64')
@@ -158,14 +159,10 @@ if empty(glob(data_dir.'/autoload/plug.vim'))
   endif
   autocmd VimEnter * PlugInstall --sync | source $MYVIMRC
 endif
-
-" Automatically install missing plugins on startup
 autocmd VimEnter * if len(filter(values(g:plugs), '!isdirectory(v:val.dir)')) | PlugInstall --sync | q | endif
 
-" Install plugins
+" PLUGIN:
 call plug#begin()
-Plug 'morhetz/gruvbox', { 'on': [] }
-Plug 'vim-airline/vim-airline', { 'on': [] }
 Plug 'machakann/vim-highlightedyank', { 'on': [] }
 Plug 'LunarWatcher/auto-pairs', { 'on': [] }
 Plug 'tpope/vim-commentary', { 'on': [] }
@@ -182,21 +179,6 @@ Plug 'preservim/nerdtree', { 'on': ['NERDTreeToggle'] }
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim', { 'on': ['Files', 'Buffers', 'Colors', 'Lines', 'BLines', 'History', 'Commands', 'Rg'] }
 call plug#end()
-
-" Plugin settings
-augroup ui_gruvbox
-  autocmd!
-  autocmd BufReadPost * call plug#load('gruvbox')
-        \| autocmd! ui_gruvbox
-        \| colorscheme gruvbox
-augroup END
-
-augroup ui_vim_airline
-  autocmd!
-  autocmd BufReadPost * call plug#load('vim-airline')
-        \| autocmd! ui_vim_airline
-        \| let g:airline_extensions = ['branch', 'tabline']
-augroup END
 
 augroup editor_vim_highlightedyank
   autocmd!
@@ -266,14 +248,6 @@ augroup completion_lsp_snippet
         \ 'whitelist': ['javascript', 'javascript.jsx', 'javascriptreact', 'typescript', 'typescript.tsx', 'typescriptreact']
         \ })
         \| endif
-        \| if executable('vim-language-server')
-        \| call lsp#register_server({
-        \ 'name': 'vim-language-server',
-        \ 'cmd': { server_info -> ['vim-language-server', '--stdio'] },
-        \ 'whitelist': ['vim'],
-        \ 'initialization_options': { 'vimruntime': $VIMRUNTIME, 'runtimepath': &rtp }
-        \ })
-        \| endif
 augroup END
 function! s:on_lsp_buffer_enabled() abort
   setlocal omnifunc=lsp#complete
@@ -303,7 +277,7 @@ augroup END
 
 nnoremap <silent><leader> :<C-u>WhichKey '<space>'<cr>
 nnoremap <silent><localleader> :<C-u>WhichKey ','<cr>
-let g:NERDTreeWinSize = 23
+let g:NERDTreeWinSize = 25
 let g:NERDTreeShowHidden = 1
 nnoremap <leader>tn :NERDTreeToggle<cr>
 let g:fzf_layout = { 'down': '40%' }
