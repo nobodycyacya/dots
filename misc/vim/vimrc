@@ -91,9 +91,9 @@ let g:loaded_zipPlugin = 1
 
 " KEYBINDINGS:
 let mapleader = ' '
-let maplocalleader = ','
-nnoremap <leader>CR :source $VIMRC<cr>
-nnoremap <leader>CE :edit $VIMRC<cr>
+let maplocalleader = '\\'
+nnoremap <localleader>CR :source $VIMRC<cr>
+nnoremap <localleader>CE :edit $VIMRC<cr>
 inoremap jk <esc>
 vnoremap jk <esc>
 cnoremap jk <C-c>
@@ -268,7 +268,7 @@ augroup lsp_install
 augroup END
 
 nnoremap <silent><leader> :<C-u>WhichKey '<space>'<cr>
-nnoremap <silent><localleader> :<C-u>WhichKey ','<cr>
+nnoremap <silent><localleader> :<C-u>WhichKey '\\'<cr>
 let g:NERDTreeWinSize = 25
 let g:NERDTreeShowHidden = 1
 nnoremap <leader>tn :NERDTreeToggle<cr>
