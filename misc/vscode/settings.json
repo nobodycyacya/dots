@@ -1,0 +1,111 @@
+{
+    // Built-in //
+    "editor.fontFamily": "'JetBrainsMono Nerd Font', Monaco, Consolas",
+    "editor.fontSize": 14,
+    "editor.fontLigatures": true,
+    "editor.guides.bracketPairs": true,
+    "editor.guides.highlightActiveIndentation": true,
+    "editor.minimap.enabled": false,
+    "editor.tabSize": 2,
+    "editor.occurrencesHighlight": "off",
+    "editor.rulers": [
+        80
+    ],
+    "editor.tokenColorCustomizations": {
+        "textMateRules": [
+            {
+                "scope": [
+                    "comment",
+                    "comment.block",
+                    "comment.block.documentation",
+                    "comment.line"
+                ],
+                "settings": {
+                    "fontStyle": "italic bold"
+                }
+            }
+        ]
+    },
+    "extensions.experimental.affinity": {
+        "vscodevim.vim": 1,
+    },
+    "window.zoomLevel": -0.7,
+    "workbench.startupEditor": "none",
+    "workbench.activityBar.location": "bottom",
+    "workbench.colorCustomizations": {
+        "statusBarItem.remoteBackground": "#181818",
+        "editorLineNumber.activeForeground": "#b5cea8",
+    },
+    // VSCodeVim //
+    "vim.changeWordIncludesWhitespace": false,
+    "vim.cursorStylePerMode.normal": "block",
+    "vim.cursorStylePerMode.insert": "line-thin",
+    "vim.cursorStylePerMode.replace": "underline",
+    "vim.cursorStylePerMode.visual": "block-outline",
+    "vim.cursorStylePerMode.visualblock": "block-outline",
+    "vim.cursorStylePerMode.visualline": "block-outline",
+    "vim.overrideCopy": true,
+    "vim.useSystemClipboard": true,
+    "vim.autoindent": true,
+    "vim.hlsearch": true,
+    "vim.ignorecase": true,
+    "vim.incsearch": true,
+    "vim.inccommand": "replace",
+    "vim.searchHighlightColor": "#f44747",
+    "vim.searchHighlightTextColor": "#ffffff",
+    "vim.searchMatchColor": "#4EC9B0",
+    "vim.searchMatchTextColor": "#181818",
+    "vim.substitutionColor": "#e2c08d",
+    "vim.substitutionTextColor": "#181818",
+    "vim.visualstar": true,
+    "vim.highlightedyank.enable": true,
+    "vim.highlightedyank.color": "#f44747",
+    "vim.highlightedyank.textColor": "#ffffff",
+    "vim.highlightedyank.duration": 1000,
+    "vim.insertModeKeyBindings": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "K"
+            ],
+            "commands": [
+                "editor.action.showHover"
+            ]
+        },
+        {
+            "before": [
+                "g",
+                "d"
+            ],
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        },
+        {
+            "before": [
+                "<leader>",
+                "t",
+                "n"
+            ],
+            "commands": [
+                "workbench.action.toggleSidebarVisibility"
+            ]
+        }
+    ],
+    "vim.statusBarColorControl": false,
+    "vim.easymotion": true,
+    "vim.surround": true,
+    "vim.sneak": true,
+    "vim.camelCaseMotion.enable": true,
+    "vim.replaceWithRegister": true,
+}
