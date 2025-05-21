@@ -221,19 +221,20 @@ require("lazy").setup({
     -- LazyVim --
     {
       "LazyVim/LazyVim",
-      { import = "lazyvim.plugins" },
-      { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     },
+    { import = "lazyvim.plugins" },
+    { import = "lazyvim.plugins.extras.coding.nvim-cmp" },
     -- AstroNvim --
     -- {
     --   "AstroNvim/AstroNvim",
     --   version = "^5",
-    --   { import = "astronvim.plugins" },
     -- },
+    -- { import = "astronvim.plugins" },
     -- {
     --   "AstroNvim/astrocommunity",
-    --   { import = "astrocommunity.completion.nvim-cmp" },
-    --   { import = "astrocommunity.pack.lua" },
     -- },
+    -- { import = "astrocommunity.completion.nvim-cmp" },
+    -- { import = "astrocommunity.completion.cmp-cmdline" },
+    -- { import = "astrocommunity.pack.lua" },
   },
 })
