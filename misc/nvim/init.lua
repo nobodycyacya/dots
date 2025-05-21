@@ -1,4 +1,4 @@
--- REFERENCE
+-- REFERENCE:
 -- https://github.com/boltlessengineer/NativeVim
 -- https://github.com/HCY-ASLEEP/NVIM-Config
 -- https://github.com/LazyVim/LazyVim
@@ -7,7 +7,7 @@
 -- https://github.com/ayamir/nvimdots
 -- https://github.com/nvim-lua/kickstart.nvim
 
--- OPTIONS
+-- OPTIONS:
 vim.opt.clipboard = "unnamedplus,unnamed"
 vim.opt.colorcolumn = "80"
 vim.opt.cursorcolumn = true
@@ -37,9 +37,9 @@ vim.opt.mouse = ""
 vim.opt.background = "dark"
 vim.cmd.colorscheme("habamax")
 
--- KEYBINDINGS
+-- KEYBINDINGS:
 vim.g.mapleader = " "
-vim.g.maplocalleader = ","
+vim.g.maplocalleader = "\\"
 vim.api.nvim_set_keymap("n", "<leader>CR", "<cmd>source $MYVIMRC<cr>", { desc = "Config: Reload" })
 vim.api.nvim_set_keymap("n", "<leader>CE", "<cmd>edit $MYVIMRC<cr>", { desc = "Config: Edit" })
 vim.api.nvim_set_keymap("i", "jk", "<esc>", { desc = "Back to Normal Mode" })
@@ -56,7 +56,7 @@ vim.api.nvim_set_keymap("n", "<C-j>", "<C-w>j", { desc = "Move to Down Window" }
 vim.api.nvim_set_keymap("n", "<C-k>", "<C-w>k", { desc = "Move to Up Window" })
 vim.api.nvim_set_keymap("n", "<C-l>", "<C-w>l", { desc = "Move to Right Window" })
 
--- AUTOCOMMAND
+-- AUTOCOMMAND:
 vim.api.nvim_create_autocmd("FileType", {
   group = vim.api.nvim_create_augroup("ChangeTabSizeWithSpecificFileType", { clear = true }),
   pattern = { "python", "json", "jsonc" },
@@ -69,7 +69,7 @@ vim.api.nvim_create_autocmd("FileType", {
 vim.api.nvim_create_autocmd("TextYankPost", {
   group = vim.api.nvim_create_augroup("HighlightYank", { clear = true }),
   callback = function()
-    vim.highlight.on_yank({ timeout = 2000 })
+    vim.highlight.on_yank({ timeout = 1000 })
   end,
 })
 vim.api.nvim_create_autocmd("BufReadPost", {
@@ -164,7 +164,7 @@ vim.api.nvim_create_autocmd("VimEnter", {
   end,
 })
 
--- BOOTSTRAP
+-- BOOTSTRAP:
 if not vim.loop.fs_stat(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") then
   vim.fn.system({
     "git",
@@ -177,22 +177,6 @@ if not vim.loop.fs_stat(vim.fn.stdpath("data") .. "/lazy/lazy.nvim") then
 end
 vim.opt.rtp:prepend(vim.fn.stdpath("data") .. "/lazy/lazy.nvim")
 require("lazy").setup({
-  default = {
-    lazy = true,
-    version = "*",
-    cond = nil,
-  },
-  ui = {
-    size = {
-      width = 0.92,
-      height = 0.92,
-    },
-    wrap = true,
-    border = "rounded",
-    title = "lazy.nvim Panel",
-    title_pos = "center",
-    backdrop = 100,
-  },
   performance = {
     rtp = {
       disabled_plugins = {
@@ -251,10 +235,5 @@ require("lazy").setup({
     --   { import = "astrocommunity.completion.nvim-cmp" },
     --   { import = "astrocommunity.pack.lua" },
     -- },
-  },
-  local_spec = true,
-  profiling = {
-    loader = true,
-    require = true,
   },
 })
