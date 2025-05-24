@@ -94,10 +94,6 @@
   (setq mac-option-modifier 'super)
   (setq mac-command-modifier 'meta))
 
-(use-package modus-themes
-  :ensure nil
-  :hook (after-init . (lambda () (load-theme 'modus-vivendi t))))
-
 (use-package startup
   :ensure nil
   :hook
