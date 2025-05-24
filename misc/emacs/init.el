@@ -297,38 +297,6 @@
   :config
   (setq flymake-fringe-indicator-position 'right-fringe))
 
-(use-package evil
-  :hook
-  (after-init . evil-mode)
-  :init
-  (setq evil-want-integration t)
-  (setq evil-want-keybinding nil)
-  :config
-  (setq evil-normal-state-cursor 'box)
-  (setq evil-emacs-state-cursor 'box)
-  (setq evil-insert-state-cursor 'bar)
-  (setq evil-visual-state-cursor 'hollow))
-
-(use-package evil-collection
-  :defer 2
-  :after (evil)
-  :config
-  (evil-collection-init))
-
-(use-package evil-escape
-  :hook (evil-mode . evil-escape-mode)
-  :config
-  (setq evil-escape-key-sequence "jk")
-  (setq evil-escape-delay 0.2))
-
-(use-package evil-nerd-commenter
-  :after (evil)
-  :bind
-  (:map evil-normal-state-map
-        (("gcc" . evilnc-comment-or-uncomment-lines)))
-  (:map evil-visual-state-map
-        (("gc" . evilnc-comment-or-uncomment-lines))))
-
 (provide 'init)
 ;;; Local Variables:
 ;;; no-byte-compile: t
